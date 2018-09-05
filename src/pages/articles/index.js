@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 
 class ArticlesIndex extends React.Component {
   render() {
@@ -22,14 +23,24 @@ class ArticlesIndex extends React.Component {
             {posts.map(({ node }) => {
               const title = get(node, 'frontmatter.title') || node.fields.slug
               return (
-                <div key={node.fields.slug}>
-                  <h3>
-                    <Link to={'/articles' + node.frontmatter.path}>
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <div key={node.fields.slug} className="box alt">
+                  <div className="row">
+                    <div className="col-4">
+                      <Img
+                        sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
+                        alt={node.frontmatter.title}
+                      />
+                    </div>
+                    <div className="col-8">
+                      <h3>
+                        <Link to={'/articles' + node.frontmatter.path}>
+                          {title}
+                        </Link>
+                      </h3>
+                      <small>{node.frontmatter.date}</small>
+                      <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                    </div>
+                  </div>
                 </div>
               )
             })}
@@ -63,6 +74,15 @@ export const pageQuery = graphql`
             date(formatString: "MM / YYYY")
             title
             path
+            thumbnail {
+              childImageSharp {
+                sizes(maxWidth: 400, maxHeight: 300, cropFocus: CENTER) {
+                  sizes
+                  aspectRatio
+                  srcSet
+                }
+              }
+            }
           }
         }
       }

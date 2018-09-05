@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 
 class PortfolioIndex extends React.Component {
   render() {
@@ -19,20 +20,24 @@ class PortfolioIndex extends React.Component {
         <div className="wrapper">
           <div className="inner">
             <Helmet title={`Portfolio | ${siteTitle}`} />
-            {posts.map(({ node }) => {
-              const title = get(node, 'frontmatter.title') || node.fields.slug
-              return (
-                <div key={node.fields.slug}>
-                  <h3>
-                    <Link to={'/portfolio' + node.frontmatter.path}>
-                      {title}
-                    </Link>{' '}
-                    - <small>{node.frontmatter.date}</small>
-                  </h3>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                </div>
-              )
-            })}
+            <section className="features">
+              {posts.map(({ node }) => (
+                <article key={node.frontmatter.path}>
+                  <h3 className="major">{node.frontmatter.title}</h3>
+                  <Img
+                    sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
+                    alt={node.frontmatter.title}
+                  />
+                  <p>{node.frontmatter.abstract}</p>
+                  <Link
+                    to={'/portfolio' + node.frontmatter.path}
+                    className="special"
+                  >
+                    View Project
+                  </Link>
+                </article>
+              ))}
+            </section>
           </div>
         </div>
       </section>
@@ -63,6 +68,16 @@ export const pageQuery = graphql`
             date(formatString: "YYYY")
             title
             path
+            abstract
+            thumbnail {
+              childImageSharp {
+                sizes(maxWidth: 600, maxHeight: 600, cropFocus: NORTH) {
+                  sizes
+                  aspectRatio
+                  srcSet
+                }
+              }
+            }
           }
         }
       }
