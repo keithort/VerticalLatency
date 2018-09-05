@@ -1,8 +1,10 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Image from './me.jpg'
 
 const Resume = () => (
   <section id="wrapper">
+    <Helmet title={`Resume | ${siteTitle}`} />
     <header>
       <div className="inner">
         <h2>Resume</h2>

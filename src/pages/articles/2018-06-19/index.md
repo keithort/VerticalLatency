@@ -7,6 +7,7 @@ abstract: Open source development can seem intimidating to new developers. Compl
 thumbnail: "./images/main.jpg"
 ---
 ![](./images/main.jpg)
+
 Open source development can seem intimidating to new developers. Complex vocabulary. Fear of rejection. Intimidating code bases. These are all relatable feelings to have. 
 
 So where does a new developer start? Documentation. As a new developer to a project, you are the one who benefits most from quality documentation. Read through it closely. Not only will this give you a better idea of how the project works and why it exists, you can spot minor grammatical and spelling errors. Look for a CONTRIBUTING.md

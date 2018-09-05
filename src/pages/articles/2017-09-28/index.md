@@ -7,6 +7,7 @@ abstract: I hate having clutter and I consider having emails that I do not need 
 thumbnail: "./images/main.jpg"
 ---
 ![](./images/main.jpg)
+
 I was an early adopter of Inbox by Google. I liked the idea of snoozing emails for later. I hate having clutter and I consider having emails that I do not need any action to be in my inbox. I also subscribe to multiple newsletters. I can't constantly keep eyes on my Twitter feed to see what the hottest new articles on a broad scope of interests are. I bundle all the emails so they only take up 1 line in Inbox as well.
 
 Here is a list of some web development related newsletters I subscribe to and recommend for weekly roundups. Hopefully you find some gold amongst them.

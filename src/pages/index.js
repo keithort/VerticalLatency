@@ -9,6 +9,10 @@ import Article from '../components/Article/article'
 class Index extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteDescription = get(
+      this,
+      'props.data.site.siteMetadata.description'
+    )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
     let articles = posts.filter(x => x.node.frontmatter.layout === 'post')
     articles = articles.slice(0, 3)
@@ -17,7 +21,10 @@ class Index extends React.Component {
 
     return (
       <div>
-        <Helmet title={siteTitle} />
+        <Helmet
+          title={`Website Development and SEO | ${siteTitle}`}
+          description={`${siteDescription}`}
+        />
 
         <Banner />
 
@@ -64,7 +71,7 @@ class Index extends React.Component {
                       to={'/portfolio' + article.node.frontmatter.path}
                       className="special"
                     >
-                      Learn More
+                      View Project
                     </Link>
                   </article>
                 ))}
@@ -72,7 +79,7 @@ class Index extends React.Component {
               <ul className="actions">
                 <li>
                   <Link to="/portfolio" className="button">
-                    View More
+                    View More Projects
                   </Link>
                 </li>
               </ul>
@@ -91,6 +98,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

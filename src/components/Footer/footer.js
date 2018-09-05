@@ -27,6 +27,9 @@ const Footer = props => (
             linkedin.com/in/keith-ort-5b656430/
           </a>
         </li>
+        <li className="fa-lastfm">
+          <a href="https://www.last.fm/user/keithort">last.fm/user/keithort</a>
+        </li>
       </ul>
       <ul className="copyright">
         <li>&copy; Vertical Latency, LLC. All rights reserved.</li>

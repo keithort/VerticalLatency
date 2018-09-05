@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 
 const ThankYouPage = () => (
   <section id="wrapper">
+    <Helmet title={`Thank You | ${siteTitle}`} />
     <header>
       <div className="inner">
         <h2>Thanks</h2>

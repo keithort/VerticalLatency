@@ -18,7 +18,7 @@ class ArticlesIndex extends React.Component {
         </header>
         <div className="wrapper">
           <div className="inner">
-            <Helmet title={siteTitle} />
+            <Helmet title={`Articles | ${siteTitle}`} />
             {posts.map(({ node }) => {
               const title = get(node, 'frontmatter.title') || node.fields.slug
               return (

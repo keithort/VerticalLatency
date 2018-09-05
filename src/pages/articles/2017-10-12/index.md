@@ -7,6 +7,7 @@ abstract: I have used Wordpress for almost a decade. It does the job. Some of th
 thumbnail: "./images/main.jpg"
 ---
 ![](./images/main.jpg)
+
 [Imposter Syndrome](https://davidwalsh.name/impostor-syndrome). David Walsh's article about it really summed up many feelings I share. When I started on my quest to overhaul this site, I wanted to use something cutting edge. I have used Wordpress for almost a decade. It does the job. Some of the recent improvements have been welcomed. Yet it felt comfortable which was what I was trying to break away from. So I opted to experiment. That lead me to feeling like I was posing as a web developer despite my long history in the industry. I really did feel like an imposter.
 
 So I put this site up in comfortable territory, using Wordpress. But I am not thrilled with it. I needed to get something up. After I launched it, I sought out to do the major project I initially conceived. I've been working to understand and use [Gatsby.JS](https://www.gatsbyjs.org) to power this site. I've been a fan of React for a long while. I messed with Angular. I looked at Vue. I sat on the fence for a long time afraid to pick one stack and really go down the rabbit hole. I've been doing that with React.

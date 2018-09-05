@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 
 const AboutMe = () => (
   <section id="wrapper">
+    <Helmet title={`About Me | ${siteTitle}`} />
     <header>
       <div className="inner">
         <h2>About Me</h2>

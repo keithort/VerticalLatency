@@ -7,6 +7,7 @@ abstract: It was January of 2005 that I landed my first real web related positio
 thumbnail: "./images/main.jpg"
 ---
 ![](./images/main.jpg)
+
 It was January of 2005 that I landed my first real web related position. I had messed around with web development in high school here and there. That knowledge stayed with me and so I moved on from retail and call center jobs with no idea the world I was about to transition into. Google was just a young search engine. Internet Explorer was the primary web browser. Twitter was not the beast it is today.
 
 That first agency job had me handling this thing called search engine optimization. I didn't have a clue what that was but I was eager to get my break in the industry. That break has paid dividends. While I still touch base with the Gil Grissom looking manager that took a shot on me (and I stayed with that company for almost 4 years), the connections I made and opportunities I seized have been invaluable.

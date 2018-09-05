@@ -58,5 +58,28 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Vertical Latency',
+        short_name: 'Vertical Latency',
+        start_url: '/',
+        background_color: '#2b3a42',
+        theme_color: '#2b3a42',
+        display: 'minimal-ui',
+        icons: [
+          {
+            src: `/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
+      },
+    },
   ],
 }

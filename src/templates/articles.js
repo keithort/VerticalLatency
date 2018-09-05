@@ -3,13 +3,13 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
-import { rhythm, scale } from '../utils/typography'
+import { rhythm } from '../utils/typography'
 
 class ArticlesTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const { previous, next, date } = this.props.pathContext
+    const { previous, next } = this.props.pathContext
     return (
       <section id="wrapper">
         <header>
@@ -49,7 +49,7 @@ class ArticlesTemplate extends React.Component {
               )}
             </ul>
 
-            <h1 className="major">{post.frontmatter.title}</h1>
+            <h3 className="major">{post.frontmatter.title}</h3>
             <p>
               <em>{post.frontmatter.date}</em>
             </p>
