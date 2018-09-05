@@ -11,7 +11,7 @@ tags:
   - Picture Spec
   - Flexbox
 abstract: The very definition of rapid development, I was tasked with building out the design for the home page and 1 sub page in a couple days in advance of a presentation.
-thumbnail: "images/20.png"
+thumbnail: "./images/20.png"
 ---
 ![](./images/20.png)
 
