@@ -9,6 +9,7 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -48,7 +49,6 @@ module.exports = {
         respectDNT: true,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,

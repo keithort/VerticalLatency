@@ -18,7 +18,7 @@ class Index extends React.Component {
     articles = articles.slice(0, 3)
     let portfolio = posts.filter(x => x.node.frontmatter.layout === 'portfolio')
     portfolio = portfolio.slice(0, 4)
-
+    console.log(portfolio)
     return (
       <div>
         <Helmet
@@ -56,19 +56,16 @@ class Index extends React.Component {
                 recent ones.
               </p>
               <section className="features">
-                {portfolio.map(article => (
-                  <article key={article.node.frontmatter.path}>
-                    <Link to={'/portfolio' + article.node.frontmatter.path}>
-                      {/* <Img
-                        src={article.node.frontmatter.thumbnail.publicURL}
-                        alt={article.node.frontmatter.title}
-                      /> */}
-                    </Link>
-                    {article.node.frontmatter.thumbnail}
-                    <h3 className="major">{article.node.frontmatter.title}</h3>
-                    <p>{article.node.frontmatter.abstract}</p>
+                {portfolio.map(({ node }) => (
+                  <article key={node.frontmatter.path}>
+                    <h3 className="major">{node.frontmatter.title}</h3>
+                    <Img
+                      sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
+                      alt={node.frontmatter.title}
+                    />
+                    <p>{node.frontmatter.abstract}</p>
                     <Link
-                      to={'/portfolio' + article.node.frontmatter.path}
+                      to={'/portfolio' + node.frontmatter.path}
                       className="special"
                     >
                       View Project
@@ -114,6 +111,15 @@ export const pageQuery = graphql`
             abstract
             layout
             path
+            thumbnail {
+              childImageSharp {
+                sizes(maxWidth: 600, maxHeight: 600, cropFocus: NORTH) {
+                  sizes
+                  aspectRatio
+                  srcSet
+                }
+              }
+            }
           }
         }
       }
