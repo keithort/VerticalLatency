@@ -58,7 +58,6 @@
 			}
 		}
 
-		@include breakpoint('<=large') {
 
 			background-color:		_palette(bg);
 
@@ -73,7 +72,6 @@
 		 	margin-top: (_size(wrapper-edges, large) * -1);
 		 	padding-top: _size(wrapper-edges, large);
 
-		}
 
 		@include breakpoint('<=medium') {
 		 	margin-top: (_size(wrapper-edges, medium) * -1);
