@@ -122,7 +122,7 @@ export const pageQuery = graphql`
             path
             thumbnail {
               childImageSharp {
-                sizes(maxWidth: 500, maxHeight: 300, cropFocus: NORTH) {
+                sizes(maxWidth: 500, maxHeight: 400, cropFocus: NORTH) {
                   srcSetWebp
                   aspectRatio
                   sizes
