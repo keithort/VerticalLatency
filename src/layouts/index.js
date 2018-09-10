@@ -5,7 +5,7 @@ import Header from '../components/Header/header'
 import Menu from '../components/Menu/menu'
 import Footer from '../components/Footer/footer'
 
-import { rhythm, scale } from '../utils/typography'
+require('prismjs/themes/prism-tomorrow.css')
 
 class Template extends React.Component {
   constructor(props) {

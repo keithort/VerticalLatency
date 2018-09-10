@@ -157,14 +157,13 @@
 			}
 
 			.image {
-				border-radius: 100%;
+				box-shadow: none;
 				margin: 0 _size(section-spacing, large) _size(element-margin) 0;
 				width: 22em;
 				overflow: hidden;
 				-ms-flex: 1;
 
 				img {
-					border-radius: 100%;
 					width: 100%;
 				}
 			}
