@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,7 +40,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

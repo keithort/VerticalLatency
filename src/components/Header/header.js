@@ -21,12 +21,13 @@ class Header extends React.Component {
   }, 50)
 
   componentDidMount() {
-    window.addEventListener('load', this.scrollListener)
-    window.addEventListener('scroll', this.scrollListener)
+    Window.addEventListener('load', this.scrollListener)
+    Window.addEventListener('scroll', this.scrollListener)
   }
 
   componentWillMount() {
-    window.removeEventListener('scroll', this.scrollListener)
+    Window.removeEventListener('load', this.scrollListener)
+    Window.removeEventListener('scroll', this.scrollListener)
   }
 
   render() {
