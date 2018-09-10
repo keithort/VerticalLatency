@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Header = props => (
-  <header id="header">
+  <header id="header" className={props.showAltNav ? 'alt' : ''}>
     <h1>
       <Link to="/">Vertical Latency</Link>
     </h1>
@@ -15,6 +15,7 @@ const Header = props => (
 )
 
 Header.propTypes = {
+  showAltNav: React.PropTypes.bool,
   onToggleMenu: React.PropTypes.func,
 }
 

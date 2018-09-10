@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
+import SubWrapper from '../../components/SubWrapper/subwrapper'
 
 class ArticlesIndex extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class ArticlesIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <section id="wrapper">
+      <SubWrapper>
         <header>
           <div className="inner">
             <h2>Articles</h2>
@@ -46,7 +47,7 @@ class ArticlesIndex extends React.Component {
             })}
           </div>
         </div>
-      </section>
+      </SubWrapper>
     )
   }
 }

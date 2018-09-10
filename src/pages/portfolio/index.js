@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
+import SubWrapper from '../../components/SubWrapper/subwrapper'
 
 class PortfolioIndex extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class PortfolioIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <section id="wrapper">
+      <SubWrapper>
         <header>
           <div className="inner">
             <h2>Portfolio</h2>
@@ -23,11 +24,16 @@ class PortfolioIndex extends React.Component {
             <section className="features">
               {posts.map(({ node }) => (
                 <article key={node.frontmatter.path}>
+                  <Link
+                    to={'/portfolio' + node.frontmatter.path}
+                    className="image"
+                  >
+                    <Img
+                      sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
+                      alt={node.frontmatter.title}
+                    />
+                  </Link>
                   <h3 className="major">{node.frontmatter.title}</h3>
-                  <Img
-                    sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
-                    alt={node.frontmatter.title}
-                  />
                   <p>{node.frontmatter.abstract}</p>
                   <Link
                     to={'/portfolio' + node.frontmatter.path}
@@ -40,7 +46,7 @@ class PortfolioIndex extends React.Component {
             </section>
           </div>
         </div>
-      </section>
+      </SubWrapper>
     )
   }
 }

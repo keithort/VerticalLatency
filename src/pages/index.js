@@ -18,7 +18,7 @@ class Index extends React.Component {
     articles = articles.slice(0, 3)
     let portfolio = posts.filter(x => x.node.frontmatter.layout === 'portfolio')
     portfolio = portfolio.slice(0, 4)
-    console.log(portfolio)
+
     return (
       <div>
         <Helmet
@@ -58,11 +58,16 @@ class Index extends React.Component {
               <section className="features">
                 {portfolio.map(({ node }) => (
                   <article key={node.frontmatter.path}>
+                    <Link
+                      to={'/portfolio' + node.frontmatter.path}
+                      className="image"
+                    >
+                      <Img
+                        sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
+                        alt={node.frontmatter.title}
+                      />
+                    </Link>
                     <h3 className="major">{node.frontmatter.title}</h3>
-                    <Img
-                      sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
-                      alt={node.frontmatter.title}
-                    />
                     <p>{node.frontmatter.abstract}</p>
                     <Link
                       to={'/portfolio' + node.frontmatter.path}

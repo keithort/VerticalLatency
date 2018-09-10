@@ -1,12 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
+import SubWrapper from '../components/SubWrapper/subwrapper'
 
 class AboutMe extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     return (
-      <section id="wrapper">
+      <SubWrapper>
         <Helmet title={`About Me | ${siteTitle}`} />
         <header>
           <div className="inner">
@@ -52,7 +53,7 @@ class AboutMe extends React.Component {
             </ul>
           </div>
         </div>
-      </section>
+      </SubWrapper>
     )
   }
 }
