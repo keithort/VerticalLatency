@@ -1,22 +1,48 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { debounce } from 'lodash'
 
-const Header = props => (
-  <header id="header" className={props.showAltNav ? 'alt' : ''}>
-    <h1>
-      <Link to="/">Vertical Latency</Link>
-    </h1>
-    <nav>
-      <a href="#menu" onClick={props.onToggleMenu}>
-        Menu
-      </a>
-    </nav>
-  </header>
-)
+class Header extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-Header.propTypes = {
-  showAltNav: React.PropTypes.bool,
-  onToggleMenu: React.PropTypes.func,
+  state = {
+    showAltNav: false,
+  }
+
+  scrollListener = debounce(() => {
+    const bannerHeight = document.querySelector('#banner')
+      ? document.querySelector('#banner').getBoundingClientRect().height
+      : 0
+    this.setState({
+      showAltNav: window.scrollY >= bannerHeight,
+    })
+  }, 50)
+
+  componentDidMount() {
+    window.addEventListener('load', this.scrollListener)
+    window.addEventListener('scroll', this.scrollListener)
+  }
+
+  componentWillMount() {
+    window.removeEventListener('scroll', this.scrollListener)
+  }
+
+  render() {
+    return (
+      <header id="header" className={this.state.showAltNav ? '' : 'alt'}>
+        <h1>
+          <Link to="/">Vertical Latency</Link>
+        </h1>
+        <nav>
+          <a href="#menu" onClick={this.props.onToggleMenu}>
+            Menu
+          </a>
+        </nav>
+      </header>
+    )
+  }
 }
 
 export default Header

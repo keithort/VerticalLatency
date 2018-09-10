@@ -7,6 +7,10 @@ import Banner from '../components/Banner/banner'
 import Article from '../components/Article/article'
 
 class Index extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
