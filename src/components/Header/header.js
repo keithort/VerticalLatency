@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { debounce } from 'lodash'
+import Logo from './logo-square.png'
 
 class Header extends React.Component {
   constructor(props) {
@@ -21,6 +22,14 @@ class Header extends React.Component {
   }, 50)
 
   componentDidMount() {
+    if (
+      document.querySelector('#banner') &&
+      document.querySelector('#banner').length
+    ) {
+      this.setState({
+        showAltNav: true,
+      })
+    }
     window.addEventListener('scroll', this.scrollListener)
   }
 
@@ -32,7 +41,9 @@ class Header extends React.Component {
     return (
       <header id="header" className={this.state.showAltNav ? '' : 'alt'}>
         <h1>
-          <Link to="/">Vertical Latency</Link>
+          <Link to="/">
+            <img src={Logo} alt="Vertical Latency" />
+          </Link>
         </h1>
         <nav>
           <a href="#menu" onClick={this.props.onToggleMenu}>
