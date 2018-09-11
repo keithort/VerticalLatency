@@ -34,7 +34,7 @@ class Template extends React.Component {
         <Helmet>
           <html lang="en" />
           <link rel="shortcut icon" type="image/png" href={Favicon512} />
-          <link rel="canonical" href="httpw://www.verticallatency.com" />
+          <link rel="canonical" href="https://www.verticallatency.com" />
           <link rel="apple-touch-icon" href={AppleTouchIcon} />
         </Helmet>
         <div id="page-wrapper">

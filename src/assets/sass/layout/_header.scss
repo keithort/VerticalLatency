@@ -100,6 +100,11 @@
 		@include breakpoint('<=small') {
 			height: 2.75em;
 			line-height: 2.75em;
+			h1 {
+				img {
+					max-width: 2rem;
+				}
+			}
 
 			nav {
 				top: 0;
@@ -125,11 +130,6 @@
 		}
 
 		@include breakpoint('<=xsmall') {
-			h1 {
-				img {
-					max-width: 2rem;
-				}
-			}
 
 			nav {
 				a {

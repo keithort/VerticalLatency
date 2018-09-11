@@ -69,7 +69,7 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Vertical Latency',
-        short_name: 'Vertical Latency',
+        short_name: 'Vert Lat',
         start_url: '/',
         background_color: '#2b3a42',
         theme_color: '#2b3a42',
