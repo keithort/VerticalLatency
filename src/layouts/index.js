@@ -14,6 +14,7 @@ class Template extends React.Component {
     super(props)
     this.state = {
       isMenuVisible: false,
+      isPreload: true,
     }
     this.handleToggleMenu = this.handleToggleMenu.bind(this)
   }
@@ -26,8 +27,10 @@ class Template extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      document.querySelector('.body').classList.remove('is-preload')
-    }, 0)
+      this.setState({
+        isPreload: false,
+      })
+    }, 750)
   }
 
   render() {
@@ -35,7 +38,7 @@ class Template extends React.Component {
 
     return (
       <div
-        className={`body is-preload ${
+        className={`body ${this.state.isPreload ? 'is-preload' : ''} ${
           this.state.isMenuVisible ? 'is-menu-visible' : ''
         }`}
       >
