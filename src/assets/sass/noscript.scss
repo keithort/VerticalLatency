@@ -14,7 +14,7 @@
 /* Banner */
 
 	#banner {
-		body.is-preload & {
+		.is-preload & {
 			.logo {
 				@include vendor('transform', 'none');
 				opacity: 1;

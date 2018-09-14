@@ -24,12 +24,20 @@ class Template extends React.Component {
     })
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      document.querySelector('.body').classList.remove('is-preload')
+    }, 0)
+  }
+
   render() {
     const { children } = this.props
 
     return (
       <div
-        className={`body ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}
+        className={`body is-preload ${
+          this.state.isMenuVisible ? 'is-menu-visible' : ''
+        }`}
       >
         <Helmet>
           <html lang="en" />
