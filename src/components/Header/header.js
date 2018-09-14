@@ -6,10 +6,10 @@ import Logo from './logo-square.png'
 class Header extends React.Component {
   constructor(props) {
     super(props)
-  }
 
-  state = {
-    showAltNav: false,
+    this.state = {
+      showAltNav: false,
+    }
   }
 
   scrollListener = debounce(() => {
@@ -22,14 +22,13 @@ class Header extends React.Component {
   }, 50)
 
   componentDidMount() {
-    if (
-      document.querySelector('#banner') &&
-      document.querySelector('#banner').length
-    ) {
-      this.setState({
-        showAltNav: true,
-      })
-    }
+    setTimeout(() => {
+      if (document.querySelector('#banner')) {
+        this.setState({
+          showAltNav: true,
+        })
+      }
+    }, 50)
     window.addEventListener('scroll', this.scrollListener)
   }
 
@@ -39,7 +38,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header id="header" className={this.state.showAltNav ? '' : 'alt'}>
+      <header id="header" className={!this.state.showAltNav ? 'alt' : ''}>
         <h1>
           <Link to="/">
             <img src={Logo} alt="Vertical Latency" />
