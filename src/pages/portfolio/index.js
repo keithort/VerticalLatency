@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Zoom from 'react-reveal/Zoom'
 import Img from 'gatsby-image'
 import SubWrapper from '../../components/SubWrapper/subwrapper'
 
@@ -22,26 +23,28 @@ class PortfolioIndex extends React.Component {
           <div className="inner">
             <Helmet title={`Portfolio | ${siteTitle}`} />
             <section className="features">
-              {posts.map(({ node }) => (
-                <article key={node.frontmatter.path}>
-                  <Link
-                    to={'/portfolio' + node.frontmatter.path}
-                    className="image"
-                  >
-                    <Img
-                      sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
-                      alt={node.frontmatter.title}
-                    />
-                  </Link>
-                  <h3 className="major">{node.frontmatter.title}</h3>
-                  <p>{node.frontmatter.abstract}</p>
-                  <Link
-                    to={'/portfolio' + node.frontmatter.path}
-                    className="special"
-                  >
-                    View Project
-                  </Link>
-                </article>
+              {posts.map(({ node }, index) => (
+                <Zoom delay={index * 200} bottom>
+                  <article key={node.frontmatter.path}>
+                    <Link
+                      to={'/portfolio' + node.frontmatter.path}
+                      className="image"
+                    >
+                      <Img
+                        sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
+                        alt={node.frontmatter.title}
+                      />
+                    </Link>
+                    <h3 className="major">{node.frontmatter.title}</h3>
+                    <p>{node.frontmatter.abstract}</p>
+                    <Link
+                      to={'/portfolio' + node.frontmatter.path}
+                      className="special"
+                    >
+                      View Project
+                    </Link>
+                  </article>
+                </Zoom>
               ))}
             </section>
           </div>

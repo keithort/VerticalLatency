@@ -3,6 +3,8 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Slide from 'react-reveal/Slide'
+
 import Banner from '../components/Banner/banner'
 import Article from '../components/Article/article'
 
@@ -33,23 +35,29 @@ class Index extends React.Component {
         <Banner />
 
         <section id="wrapper">
-          <section id="one" className="wrapper spotlight style1">
-            <div className="inner">
-              <Article data={articles[0]} />
-            </div>
-          </section>
+          <Slide right>
+            <section id="one" className="wrapper spotlight style1">
+              <div className="inner">
+                <Article data={articles[0]} />
+              </div>
+            </section>
+          </Slide>
 
-          <section id="two" className="wrapper alt spotlight style2">
-            <div className="inner">
-              <Article data={articles[1]} />
-            </div>
-          </section>
+          <Slide left>
+            <section id="two" className="wrapper alt spotlight style2">
+              <div className="inner">
+                <Article data={articles[1]} />
+              </div>
+            </section>
+          </Slide>
 
-          <section id="three" className="wrapper spotlight style3">
-            <div className="inner">
-              <Article data={articles[2]} />
-            </div>
-          </section>
+          <Slide right>
+            <section id="three" className="wrapper spotlight style3">
+              <div className="inner">
+                <Article data={articles[2]} />
+              </div>
+            </section>
+          </Slide>
 
           <section id="four" className="wrapper alt style1">
             <div className="inner">
@@ -60,26 +68,30 @@ class Index extends React.Component {
                 recent ones.
               </p>
               <section className="features">
-                {portfolio.map(({ node }) => (
-                  <article key={node.frontmatter.path}>
-                    <Link
-                      to={'/portfolio' + node.frontmatter.path}
-                      className="image"
-                    >
-                      <Img
-                        sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
-                        alt={node.frontmatter.title}
-                      />
-                    </Link>
-                    <h3 className="major">{node.frontmatter.title}</h3>
-                    <p>{node.frontmatter.abstract}</p>
-                    <Link
-                      to={'/portfolio' + node.frontmatter.path}
-                      className="special"
-                    >
-                      View Project
-                    </Link>
-                  </article>
+                {portfolio.map(({ node }, index) => (
+                  <Slide bottom delay={index * 100} key={node.frontmatter.path}>
+                    <article>
+                      <Link
+                        to={'/portfolio' + node.frontmatter.path}
+                        className="image"
+                      >
+                        <Img
+                          sizes={
+                            node.frontmatter.thumbnail.childImageSharp.sizes
+                          }
+                          alt={node.frontmatter.title}
+                        />
+                      </Link>
+                      <h3 className="major">{node.frontmatter.title}</h3>
+                      <p>{node.frontmatter.abstract}</p>
+                      <Link
+                        to={'/portfolio' + node.frontmatter.path}
+                        className="special"
+                      >
+                        View Project
+                      </Link>
+                    </article>
+                  </Slide>
                 ))}
               </section>
               <ul className="actions">

@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
+import Slide from 'react-reveal/Slide'
 import SubWrapper from '../../components/SubWrapper/subwrapper'
 
 class ArticlesIndex extends React.Component {
@@ -21,27 +22,31 @@ class ArticlesIndex extends React.Component {
         <div className="wrapper">
           <div className="inner">
             <Helmet title={`Articles | ${siteTitle}`} />
-            {posts.map(({ node }) => {
+            {posts.map(({ node }, index) => {
               const title = get(node, 'frontmatter.title') || node.fields.slug
               return (
-                <div key={node.fields.slug} className="box alt">
-                  <div className="row">
-                    <div className="col-4">
-                      <Img
-                        sizes={node.frontmatter.thumbnail.childImageSharp.sizes}
-                        alt={node.frontmatter.title}
-                      />
-                    </div>
-                    <div className="col-8">
-                      <h3>
-                        <Link to={'/articles' + node.frontmatter.path}>
-                          {title}
-                        </Link>
-                      </h3>
-                      <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <Slide right delay={index * 200}>
+                  <div key={node.fields.slug} className="box alt">
+                    <div className="row">
+                      <div className="col-4">
+                        <Img
+                          sizes={
+                            node.frontmatter.thumbnail.childImageSharp.sizes
+                          }
+                          alt={node.frontmatter.title}
+                        />
+                      </div>
+                      <div className="col-8">
+                        <h3>
+                          <Link to={'/articles' + node.frontmatter.path}>
+                            {title}
+                          </Link>
+                        </h3>
+                        <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Slide>
               )
             })}
           </div>
