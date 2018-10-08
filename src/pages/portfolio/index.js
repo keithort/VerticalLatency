@@ -24,7 +24,7 @@ class PortfolioIndex extends React.Component {
             <Helmet title={`Portfolio | ${siteTitle}`} />
             <section className="features">
               {posts.map(({ node }, index) => (
-                <Zoom delay={index * 200} bottom>
+                <Zoom delay={50} bottom>
                   <article key={node.frontmatter.path}>
                     <Link
                       to={'/portfolio' + node.frontmatter.path}

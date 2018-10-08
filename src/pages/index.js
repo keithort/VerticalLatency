@@ -69,7 +69,7 @@ class Index extends React.Component {
               </p>
               <section className="features">
                 {portfolio.map(({ node }, index) => (
-                  <Slide bottom delay={index * 100} key={node.frontmatter.path}>
+                  <Slide bottom delay={50} key={node.frontmatter.path}>
                     <article>
                       <Link
                         to={'/portfolio' + node.frontmatter.path}
