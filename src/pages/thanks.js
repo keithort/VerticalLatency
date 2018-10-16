@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import SubWrapper from '../components/SubWrapper/subwrapper'
+import Banner from '../components/Banner/banner'
 
 class ThankYouPage extends React.Component {
   render() {
@@ -9,11 +10,7 @@ class ThankYouPage extends React.Component {
     return (
       <SubWrapper>
         <Helmet title={`Thank You | ${siteTitle}`} />
-        <header>
-          <div className="inner">
-            <h2>Thanks</h2>
-          </div>
-        </header>
+        <Banner title="Thank You" description="" />
         <div className="wrapper">
           <div className="inner">
             <p>Thanks for reaching out. I'll be in touch soon.</p>

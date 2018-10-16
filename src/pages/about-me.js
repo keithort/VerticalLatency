@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import SubWrapper from '../components/SubWrapper/subwrapper'
+import Banner from '../components/Banner/banner'
 
 class AboutMe extends React.Component {
   render() {
@@ -9,12 +10,10 @@ class AboutMe extends React.Component {
     return (
       <SubWrapper>
         <Helmet title={`About Me | ${siteTitle}`} />
-        <header>
-          <div className="inner">
-            <h2>About Me</h2>
-            <p>Learn a little something about who I am.</p>
-          </div>
-        </header>
+        <Banner
+          title="About Me"
+          description="Learn a little something about who I am."
+        />
         <div className="wrapper">
           <div className="inner">
             <h3 className="major">Hobbies</h3>

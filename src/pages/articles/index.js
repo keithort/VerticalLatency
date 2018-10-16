@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import Slide from 'react-reveal/Slide'
 import SubWrapper from '../../components/SubWrapper/subwrapper'
+import Banner from '../../components/Banner/banner'
 
 class ArticlesIndex extends React.Component {
   render() {
@@ -13,19 +14,17 @@ class ArticlesIndex extends React.Component {
 
     return (
       <SubWrapper>
-        <header>
-          <div className="inner">
-            <h2>Articles</h2>
-            <p>Occassional musings on web development.</p>
-          </div>
-        </header>
+        <Banner
+          title="Articles"
+          description="Occassional musings on web development."
+        />
         <div className="wrapper">
-          <div className="inner">
+          <div className="inner" style={{ overflowX: 'hidden' }}>
             <Helmet title={`Articles | ${siteTitle}`} />
             {posts.map(({ node }, index) => {
               const title = get(node, 'frontmatter.title') || node.fields.slug
               return (
-                <Slide right delay={index * 200}>
+                <Slide right key={index}>
                   <div key={node.fields.slug} className="box alt">
                     <div className="row">
                       <div className="col-4">

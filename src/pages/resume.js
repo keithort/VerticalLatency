@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import SubWrapper from '../components/SubWrapper/subwrapper'
 import Image from './me.jpg'
+import Banner from '../components/Banner/banner'
 
 class Resume extends React.Component {
   render() {
@@ -10,15 +11,10 @@ class Resume extends React.Component {
     return (
       <SubWrapper>
         <Helmet title={`Resume | ${siteTitle}`} />
-        <header>
-          <div className="inner">
-            <h2>Resume</h2>
-            <p>
-              Working in the web development industry since 2005, here are the
-              places I have been employed.
-            </p>
-          </div>
-        </header>
+        <Banner
+          title="Resume"
+          description="Working in the web development industry since 2005."
+        />
         <div className="wrapper">
           <div className="inner">
             <span className="image right">
@@ -34,8 +30,8 @@ class Resume extends React.Component {
                 Design
               </li>
               <li>JavaScript, Gulp.js, Grunt.js, NPM</li>
-              <li>React.js, Angular.js, jQuery, Parsley.js, JSON</li>
-              <li>PHP, Python</li>
+              <li>React.js, Angular.js, Redux, jQuery, Parsley.js, JSON</li>
+              <li>PHP</li>
               <li>Drupal 6+, WordPress 3+</li>
               <li>Git, Subversion</li>
             </ul>

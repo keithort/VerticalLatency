@@ -26,13 +26,17 @@ class Index extends React.Component {
     portfolio = portfolio.slice(0, 4)
 
     return (
-      <div>
+      <div style={{ overflowX: 'hidden' }}>
         <Helmet
-          title={`Website Development and SEO | ${siteTitle}`}
+          title={`${siteDescription} | ${siteTitle}`}
           description={`${siteDescription}`}
         />
 
-        <Banner />
+        <Banner
+          title={siteTitle}
+          description={siteDescription}
+          location={this.props.location.pathname}
+        />
 
         <section id="wrapper">
           <Slide right>
@@ -69,7 +73,7 @@ class Index extends React.Component {
               </p>
               <section className="features">
                 {portfolio.map(({ node }, index) => (
-                  <Slide bottom delay={50} key={node.frontmatter.path}>
+                  <Slide bottom key={node.frontmatter.path}>
                     <article>
                       <Link
                         to={'/portfolio' + node.frontmatter.path}

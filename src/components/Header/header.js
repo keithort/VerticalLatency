@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { debounce } from 'lodash'
-import Logo from './logo-square.png'
+import Logo from '../../images/logo-square.png'
 
 class Header extends React.Component {
   constructor(props) {

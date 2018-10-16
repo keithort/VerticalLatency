@@ -7,19 +7,19 @@ import Header from '../components/Header/header'
 import Menu from '../components/Menu/menu'
 import Footer from '../components/Footer/footer'
 
-require('prismjs/themes/prism-tomorrow.css')
+import 'prismjs/themes/prism-tomorrow.css'
 
 class Template extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      isMenuVisible: false,
-      isPreload: true,
-    }
-    this.handleToggleMenu = this.handleToggleMenu.bind(this)
   }
 
-  handleToggleMenu() {
+  state = {
+    isMenuVisible: false,
+    isPreload: true,
+  }
+
+  handleToggleMenu = () => {
     this.setState({
       isMenuVisible: !this.state.isMenuVisible,
     })
@@ -34,8 +34,7 @@ class Template extends React.Component {
   }
 
   render() {
-    const { children } = this.props
-
+    const { children, location } = this.props
     return (
       <div
         className={`body ${this.state.isPreload ? 'is-preload' : ''} ${

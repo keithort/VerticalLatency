@@ -3,7 +3,7 @@ module.exports = {
     title: 'Vertical Latency',
     author: 'Keith Ort',
     description:
-      'Orlando, FL based website design and development with search engine optimization.',
+      'Modern website design and development with search engine optimization.',
     siteUrl: 'https://www.verticallatency.com',
   },
   pathPrefix: '/',

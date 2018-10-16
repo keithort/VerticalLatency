@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Zoom from 'react-reveal/Zoom'
 import Img from 'gatsby-image'
 import SubWrapper from '../../components/SubWrapper/subwrapper'
+import Banner from '../../components/Banner/banner'
 
 class PortfolioIndex extends React.Component {
   render() {
@@ -13,18 +14,16 @@ class PortfolioIndex extends React.Component {
 
     return (
       <SubWrapper>
-        <header>
-          <div className="inner">
-            <h2>Portfolio</h2>
-            <p>A sampling of projects I have worked on.</p>
-          </div>
-        </header>
+        <Banner
+          title="Portfolio"
+          description="A sampling of projects I have worked on."
+        />
         <div className="wrapper">
           <div className="inner">
             <Helmet title={`Portfolio | ${siteTitle}`} />
             <section className="features">
               {posts.map(({ node }, index) => (
-                <Zoom delay={50} bottom>
+                <Zoom bottom>
                   <article key={node.frontmatter.path}>
                     <Link
                       to={'/portfolio' + node.frontmatter.path}
