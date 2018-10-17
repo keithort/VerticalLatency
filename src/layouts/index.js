@@ -16,7 +16,6 @@ class Template extends React.Component {
 
   state = {
     isMenuVisible: false,
-    isPreload: true,
   }
 
   handleToggleMenu = () => {
@@ -25,21 +24,11 @@ class Template extends React.Component {
     })
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isPreload: false,
-      })
-    }, 750)
-  }
-
   render() {
     const { children, location } = this.props
     return (
       <div
-        className={`body ${this.state.isPreload ? 'is-preload' : ''} ${
-          this.state.isMenuVisible ? 'is-menu-visible' : ''
-        }`}
+        className={`body ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}
       >
         <Helmet>
           <html lang="en" />

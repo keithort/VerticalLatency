@@ -1,22 +1,41 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import Logo from '../../images/logo-square.png'
 
-const Banner = props => (
-  <section id="banner">
-    <div className="inner">
-      <div
-        className="logo"
-        style={{ display: props.location === '/' ? 'block' : 'none' }}
-      >
-        <span className="icon">
-          <img src={Logo} alt="Vertical Latency" />
-        </span>
-      </div>
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-    </div>
-  </section>
-)
+export default class Banner extends Component {
+  constructor(props) {
+    super(props)
+  }
 
-export default Banner
+  state = {
+    isPreload: true,
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        isPreload: false,
+      })
+    }, 250)
+  }
+
+  render() {
+    return (
+      <div className={`${this.state.isPreload ? 'is-preload' : ''}`}>
+        <section id="banner">
+          <div className="inner">
+            {this.props.location === '/' ? (
+              <div className="logo">
+                <span className="icon">
+                  <img src={Logo} alt="Vertical Latency" />
+                </span>
+              </div>
+            ) : null}
+            <h2>{this.props.title}</h2>
+            <p>{this.props.description}</p>
+          </div>
+        </section>
+      </div>
+    )
+  }
+}
