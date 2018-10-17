@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Favicon512 from '../../static/android-chrome-512x512.png'
 import AppleTouchIcon from '../../static/apple-touch-icon.png'
@@ -25,7 +26,7 @@ class Template extends React.Component {
   }
 
   render() {
-    const { children, location } = this.props
+    const { children } = this.props
     return (
       <div
         className={`body ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}
@@ -48,7 +49,7 @@ class Template extends React.Component {
 }
 
 Template.propTypes = {
-  children: React.PropTypes.func,
+  children: PropTypes.func.isRequired,
 }
 
 export default Template

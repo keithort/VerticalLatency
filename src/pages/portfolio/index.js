@@ -16,15 +16,17 @@ class PortfolioIndex extends React.Component {
       <SubWrapper>
         <Banner
           title="Portfolio"
-          description="A sampling of projects I have worked on."
+          description={`A sampling of projects I have worked on over my ${parseInt(
+            new Date().getFullYear()
+          ) - 2005} year career.`}
         />
         <div className="wrapper">
           <div className="inner">
             <Helmet title={`Portfolio | ${siteTitle}`} />
             <section className="features">
               {posts.map(({ node }, index) => (
-                <Zoom bottom>
-                  <article key={node.frontmatter.path}>
+                <Zoom bottom key={node.frontmatter.path}>
+                  <article>
                     <Link
                       to={'/portfolio' + node.frontmatter.path}
                       className="image"

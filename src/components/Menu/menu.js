@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 const Links = [
@@ -43,7 +44,7 @@ const Menu = props => (
 )
 
 Menu.propTypes = {
-  onToggleMenu: React.PropTypes.func,
+  onToggleMenu: PropTypes.func.isRequired,
 }
 
 export default Menu

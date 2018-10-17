@@ -36,7 +36,10 @@ const Footer = props => (
           </li>
         </ul>
         <ul className="copyright">
-          <li>&copy; Vertical Latency, LLC. All rights reserved.</li>
+          <li>
+            &copy; 2009 - {new Date().getFullYear()} Vertical Latency, LLC. All
+            rights reserved.
+          </li>
           <li>
             Design: <a href="http://html5up.net">HTML5 UP</a>
           </li>

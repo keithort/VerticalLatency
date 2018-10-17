@@ -7,6 +7,7 @@ import Slide from 'react-reveal/Slide'
 
 import Banner from '../components/Banner/banner'
 import Article from '../components/Article/article'
+import SubWrapper from '../components/SubWrapper/subwrapper'
 
 class Index extends React.Component {
   constructor(props) {
@@ -38,30 +39,30 @@ class Index extends React.Component {
           location={this.props.location.pathname}
         />
 
-        <section id="wrapper">
-          <Slide right>
-            <section id="one" className="wrapper spotlight style1">
+        <SubWrapper>
+          <section id="one" className="wrapper spotlight style1">
+            <Slide right>
               <div className="inner">
                 <Article data={articles[0]} />
               </div>
-            </section>
-          </Slide>
+            </Slide>
+          </section>
 
-          <Slide left>
-            <section id="two" className="wrapper alt spotlight style2">
+          <section id="two" className="wrapper alt spotlight style2">
+            <Slide left>
               <div className="inner">
                 <Article data={articles[1]} />
               </div>
-            </section>
-          </Slide>
+            </Slide>
+          </section>
 
-          <Slide right>
-            <section id="three" className="wrapper spotlight style3">
+          <section id="three" className="wrapper spotlight style3">
+            <Slide right>
               <div className="inner">
                 <Article data={articles[2]} />
               </div>
-            </section>
-          </Slide>
+            </Slide>
+          </section>
 
           <section id="four" className="wrapper alt style1">
             <div className="inner">
@@ -107,7 +108,7 @@ class Index extends React.Component {
               </ul>
             </div>
           </section>
-        </section>
+        </SubWrapper>
       </div>
     )
   }
