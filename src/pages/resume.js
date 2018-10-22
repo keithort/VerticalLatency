@@ -30,8 +30,8 @@ class Resume extends React.Component {
                 Design
               </li>
               <li>JavaScript, Gulp.js, Grunt.js, NPM</li>
-              <li>React.js, Angular.js, Redux, jQuery, Parsley.js, JSON</li>
-              <li>PHP</li>
+              <li>React.js, Angular.js, Redux, jQuery, MongoDB</li>
+              <li>PHP, MySQL</li>
               <li>Drupal 6+, WordPress 3+</li>
               <li>Git, Subversion</li>
             </ul>

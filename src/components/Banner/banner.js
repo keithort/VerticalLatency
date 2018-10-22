@@ -12,11 +12,9 @@ export default class Banner extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isPreload: false,
-      })
-    }, 250)
+    this.setState({
+      isPreload: false,
+    })
   }
 
   render() {
