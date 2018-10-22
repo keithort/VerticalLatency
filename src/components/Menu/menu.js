@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
@@ -25,23 +25,31 @@ const Links = [
   },
 ]
 
-const Menu = props => (
-  <nav id="menu">
-    <div className="inner">
-      <h2>Menu</h2>
-      <ul className="links">
-        {Links.map(link => (
-          <li key={link.url}>
-            <Link onClick={props.onToggleMenu} to={link.url}>
-              {link.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <a className="close" onClick={props.onToggleMenu} href="javascript:;" />
-    </div>
-  </nav>
-)
+class Menu extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <nav id="menu">
+        <div className="inner">
+          <h2>Menu</h2>
+          <ul className="links">
+            {Links.map(link => (
+              <li key={link.url}>
+                <Link onClick={this.props.onToggleMenu} to={link.url}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <a className="close" onClick={this.props.onToggleMenu} />
+        </div>
+      </nav>
+    )
+  }
+}
 
 Menu.propTypes = {
   onToggleMenu: PropTypes.func.isRequired,

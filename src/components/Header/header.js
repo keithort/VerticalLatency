@@ -22,13 +22,6 @@ class Header extends React.Component {
   }, 50)
 
   componentDidMount() {
-    setTimeout(() => {
-      if (document.querySelector('#banner')) {
-        this.setState({
-          showAltNav: true,
-        })
-      }
-    }, 50)
     window.addEventListener('scroll', this.scrollListener)
   }
 
