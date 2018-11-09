@@ -9,7 +9,7 @@ tags:
   - Redux
   - Emotion
   - React Router
-abstract: This project is using React's native functionality to handle state management without needing Redux or Flux.
+abstract: This project uses pulls data from a public news API by NewsAPI.
 thumbnail: "images/2.png"
 ---
 ![](./images/2.png)
