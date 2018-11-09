@@ -20,6 +20,10 @@ const Links = [
     name: 'Portfolio',
   },
   {
+    url: '/projects',
+    name: 'Projects',
+  },
+  {
     url: '/resume',
     name: 'Resume',
   },

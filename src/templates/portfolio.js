@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
-import { rhythm, scale } from '../utils/typography'
+import Banner from '../components/Banner/banner'
 
 class PortfolioTemplate extends React.Component {
   render() {
@@ -13,12 +13,12 @@ class PortfolioTemplate extends React.Component {
 
     return (
       <section id="wrapper">
-        <header>
-          <div className="inner">
-            <h2>Portfolio</h2>
-            <p>A sampling of projects I have worked on.</p>
-          </div>
-        </header>
+        <Banner
+          title="Portfolio"
+          description={`A sampling of projects I have worked on over my ${parseInt(
+            new Date().getFullYear()
+          ) - 2005} year career.`}
+        />
         <div className="wrapper">
           <div className="inner">
             <ul

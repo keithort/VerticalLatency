@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
+import Banner from '../components/Banner/banner'
+
 import { rhythm } from '../utils/typography'
 
 class ArticlesTemplate extends React.Component {
@@ -12,12 +14,10 @@ class ArticlesTemplate extends React.Component {
     const { previous, next } = this.props.pathContext
     return (
       <section id="wrapper">
-        <header>
-          <div className="inner">
-            <h2>Articles</h2>
-            <p>Occassional musings on web development.</p>
-          </div>
-        </header>
+        <Banner
+          title="Articles"
+          description="Occassional musings on web development."
+        />
         <div className="wrapper">
           <div className="inner">
             <Helmet
