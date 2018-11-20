@@ -3,10 +3,6 @@ import React, { Component } from 'react'
 import Logo from '../../images/logo-square.png'
 
 export default class Banner extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   state = {
     isPreload: true,
   }

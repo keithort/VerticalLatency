@@ -11,10 +11,6 @@ import Footer from '../components/Footer/footer'
 import 'prismjs/themes/prism-tomorrow.css'
 
 class Template extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   state = {
     isMenuVisible: false,
   }
