@@ -9,6 +9,7 @@ tags:
   - Photoshop
 thumbnail: "./images/15.png"
 abstract: Destination Weddings & Honemoons wanted to engage… the recently engaged.
+employer: Bonnier
 ---
 ![](./images/15.png)
 

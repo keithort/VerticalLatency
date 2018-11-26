@@ -9,6 +9,7 @@ tags:
   - Photoshop
 abstract: One such possibility was a custom content hub that incorporated paid-for marketing onto an existing brands web site.
 thumbnail: "./images/7.png"
+employer: Bonnier
 ---
 ![](./images/7.png)
 

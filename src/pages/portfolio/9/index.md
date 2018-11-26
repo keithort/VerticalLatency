@@ -9,6 +9,7 @@ tags:
   - Photoshop
 thumbnail: "./images/9.png"
 abstract: Through a marketing agency, I was brought on to build out the Facebook page for their new messaging.
+employer: Vertical Latency
 ---
 ![](./images/9.png)
 

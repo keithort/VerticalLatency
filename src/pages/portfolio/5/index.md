@@ -9,6 +9,7 @@ tags:
   - Photoshop
 thumbnail: "./images/5.png"
 abstract: The site needed an updated header and some elements to be cleaned up.
+employer: Bonnier
 ---
 ![](./images/5.png)
 

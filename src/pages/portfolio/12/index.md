@@ -9,6 +9,7 @@ tags:
   - Photoshop
 abstract: One of the first challenging projects I worked on at Bonnier was an events calendar for Florida Travel & Life magazine.
 thumbnail: "./images/12.png"
+employer: Bonnier
 ---
 ![](./images/12.png)
 

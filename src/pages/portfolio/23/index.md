@@ -8,6 +8,7 @@ tags:
   - Woocommerce
 abstract: I was subcontracted by another developer to build a new site for Bauer Financial in late 2017.
 thumbnail: "images/23.png"
+employer: Vertical Latency
 ---
 ![](./images/23.png)
 

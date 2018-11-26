@@ -10,6 +10,7 @@ tags:
   - JavaScript
 abstract: As the iPad revolution took hold, Field & Stream recognized that a big portion of their web site was unusable for those users.
 thumbnail: "./images/14.png"
+employer: Bonnier
 ---
 ![](./images/14.png)
 

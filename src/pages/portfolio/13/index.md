@@ -9,6 +9,7 @@ tags:
   - Photoshop
 abstract: What resulted was a unique web site that engaged users and attracted hundreds of entries.
 thumbnail: "./images/13.png"
+employer: Bonnier
 ---
 ![](./images/13.png)
 

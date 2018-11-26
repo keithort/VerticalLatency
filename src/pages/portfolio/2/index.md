@@ -11,6 +11,7 @@ tags:
   - Google Web Fonts
 thumbnail: "./images/2.jpg"
 abstract: Our team was approached to build the site out to replace an existing, poorly designed and highly cluttered web site with a more modern one.
+employer: Bonnier
 ---
 ![](./images/2.jpg)
 

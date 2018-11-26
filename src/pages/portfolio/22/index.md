@@ -9,6 +9,7 @@ tags:
   - Angular.js
 abstract: NextDeal is primarily an email company reaching out to clients on behalf of title agencies.
 thumbnail: "./images/22.png"
+employer: NextDeal
 ---
 ![](./images/22.png)
 

@@ -9,6 +9,7 @@ tags:
   - Flexbox
 abstract: Fresh off my contract with NBCUniversal, I was presented an opportunity to work with another great brand in Haagen-Dazs Ice Cream.
 thumbnail: "./images/21.png"
+employer: Vertical Latency
 ---
 ![](./images/21.png)
 

@@ -11,6 +11,7 @@ tags:
   - Google Web Fonts
 thumbnail: "./images/3.png"
 abstract: We were asked to modernize the site in anticipation of the new 2012 season.
+employer: Bonnier
 ---
 ![](./images/3.png)
 

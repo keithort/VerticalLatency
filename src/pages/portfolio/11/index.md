@@ -11,6 +11,7 @@ tags:
   - JavaScript
 abstract: Their existing web site did not showcase their graphics well so they redesigned their site internally.
 thumbnail: "./images/11.png"
+employer: Eleet
 ---
 ![](./images/11.png)
 

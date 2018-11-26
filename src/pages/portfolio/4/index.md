@@ -11,6 +11,7 @@ tags:
   - JavaScript
 thumbnail: "./images/4.png"
 abstract: It is fully cross-browser consistent and utilizes built-in features of WordPress menus and templating from custom developed parent theme.
+employer: Vertical Latency
 ---
 ![](./images/4.png)
 

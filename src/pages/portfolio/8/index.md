@@ -9,6 +9,7 @@ tags:
   - Photoshop
 abstract: We built out a beautiful subsite that accomplished these goals and worked uniformly in all browsers.
 thumbnail: "./images/8.png"
+employer: Bonnier
 ---
 ![](./images/8.png)
 

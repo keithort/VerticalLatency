@@ -1,13 +1,37 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import SubWrapper from '../components/SubWrapper/subwrapper'
-import Image from './me.jpg'
-import Banner from '../components/Banner/banner'
+import SubWrapper from '../../components/SubWrapper/subwrapper'
+import Image from '../me.jpg'
+import Banner from '../../components/Banner/banner'
+import Portfolio from './portfolio'
 
 class Resume extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const portfolioProjects = get(this, 'props.data.allMarkdownRemark.edges')
+    const VL = portfolioProjects.filter(
+      project => project.node.frontmatter.employer === 'Vertical Latency'
+    )
+    const Digitec = portfolioProjects.filter(
+      project => project.node.frontmatter.employer === 'Digitec'
+    )
+    const NextDeal = portfolioProjects.filter(
+      project => project.node.frontmatter.employer === 'NextDeal'
+    )
+    const VI = portfolioProjects.filter(
+      project => project.node.frontmatter.employer === 'Vacation Innovations'
+    )
+    const NBCUniversal = portfolioProjects.filter(
+      project => project.node.frontmatter.employer === 'NBCUniversal'
+    )
+    const Bonnier = portfolioProjects.filter(
+      project => project.node.frontmatter.employer === 'Bonnier'
+    )
+    const Eleet = portfolioProjects.filter(
+      project => project.node.frontmatter.employer === 'Eleet'
+    )
+
     return (
       <SubWrapper>
         <Helmet title={`Resume | ${siteTitle}`} />
@@ -58,6 +82,7 @@ class Resume extends React.Component {
                 One.
               </li>
             </ul>
+            <Portfolio data={VL} />
 
             <h3 className="major">
               Digitec Interactive, Orlando, FL —{' '}
@@ -72,6 +97,7 @@ class Resume extends React.Component {
                 checklists, and user input blocks.
               </li>
             </ul>
+            <Portfolio data={Digitec} />
 
             <h3 className="major">
               Digital Closing Docs, Orlando, FL —{' '}
@@ -89,6 +115,7 @@ class Resume extends React.Component {
                 Created cross-platform consistent email newsletter templates.
               </li>
             </ul>
+            <Portfolio data={NextDeal} />
 
             <h3 className="major">
               Vacation Innovations, Orlando, FL — <em>PHP Web Developer</em>
@@ -108,6 +135,7 @@ class Resume extends React.Component {
                 projects.
               </li>
             </ul>
+            <Portfolio data={VI} />
 
             <h3 className="major">
               NBCUniversal, Orlando, FL — <em>Front End Developer</em>
@@ -134,6 +162,7 @@ class Resume extends React.Component {
                 game.
               </li>
             </ul>
+            <Portfolio data={NBCUniversal} />
 
             <h3 className="major">
               Westgate Resorts, Orlando, FL — <em>Front End Developer</em>
@@ -173,6 +202,7 @@ class Resume extends React.Component {
                 Drupal themes that were cross browser consistent.
               </li>
             </ul>
+            <Portfolio data={Bonnier} />
 
             <h3 className="major">
               Eleet Technologies, Oviedo, FL — <em>IT/Web Engineer</em>
@@ -192,6 +222,7 @@ class Resume extends React.Component {
                 McFarlin, and Herron, and Morse Insurance Agency.
               </li>
             </ul>
+            <Portfolio data={Eleet} />
 
             <h3 className="major">
               WebSolvers, Winter Park, FL — <em>SEO Specialist/Server Admin</em>
@@ -225,6 +256,19 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    allMarkdownRemark(
+      filter: { frontmatter: { layout: { eq: "portfolio" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            employer
+          }
+        }
       }
     }
   }

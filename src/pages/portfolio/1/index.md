@@ -10,6 +10,7 @@ tags:
   - Google Web Fonts
 thumbnail: "./images/1.jpg"
 abstract: In preparation for the 2013 session, our team was asked to build the new sub site.
+employer: Bonnier
 ---
 ![](./images/1.jpg)
 
