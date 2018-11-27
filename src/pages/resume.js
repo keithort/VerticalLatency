@@ -1,10 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import SubWrapper from '../../components/SubWrapper/subwrapper'
-import Image from '../me.jpg'
-import Banner from '../../components/Banner/banner'
-import Portfolio from './portfolio'
+import SubWrapper from '../components/SubWrapper/subwrapper'
+import Image from './me.jpg'
+import Banner from '../components/Banner/banner'
+import Portfolio from './resume/portfolio'
 
 class Resume extends React.Component {
   render() {
