@@ -25,8 +25,8 @@ const Footer = props => (
             <a href="https://www.github.com/keithort">github.com/keithort</a>
           </li>
           <li className="fa-linkedin">
-            <a href="https://www.linkedin.com/in/keith-ort-5b656430/">
-              linkedin.com/in/keith-ort-5b656430/
+            <a href="https://www.linkedin.com/in/keith-ort">
+              linkedin.com/in/keith-ort
             </a>
           </li>
           <li className="fa-lastfm">
