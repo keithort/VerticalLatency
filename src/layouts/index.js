@@ -32,6 +32,10 @@ class Template extends React.Component {
           <link rel="shortcut icon" type="image/png" href={Favicon512} />
           <link rel="canonical" href="https://www.verticallatency.com" />
           <link rel="apple-touch-icon" href={AppleTouchIcon} />
+          <meta
+            name="google-site-verification"
+            content="aL4YrA5X4fmbTBrh-w96NQVW1mQX4sJDL43e8zl1jn8"
+          />
         </Helmet>
         <div id="page-wrapper">
           <Header onToggleMenu={this.handleToggleMenu} />
