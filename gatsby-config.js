@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Vertical Latency',
     author: 'Keith Ort',
-    description:
-      'Modern website design and development with search engine optimization.',
+    description: 'Modern web site development and search engine optimization.',
     siteUrl: 'https://www.verticallatency.com',
   },
   pathPrefix: '/',

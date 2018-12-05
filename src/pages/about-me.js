@@ -16,6 +16,35 @@ class AboutMe extends React.Component {
         />
         <div className="wrapper">
           <div className="inner">
+            <h3 className="major">Professional Overview</h3>
+            <p>
+              Throughout my career, I have established a track record of success
+              by leveraging a collaborative leadership style to accomplish all
+              short- and long-range objectives in diverse roles for web
+              engineering, front end development, and full stack development. I
+              am able to clearly convey complex technical information and
+              propose novel solutions to build consensus with key project
+              stakeholders, including high-value clients and executive
+              leadership.
+            </p>
+            <p>
+              A small selection of my key projects and accomplishments includes…
+            </p>
+            <ul>
+              <li>
+                Web Engineer for websites and digital assets for Campbell’s
+                Soup, Ketel One, and Haagen-Daaz.
+              </li>
+              <li>
+                Front End Developer for NBCUniversal in Orlando, Florida
+                creating immersive user experiences.{' '}
+              </li>
+              <li>
+                Excellent technical proficiencies in HTML5, CSS3, Sass,
+                JavaScript, React.js, Angular.js, jQuery, PHP, Drupal 6+,
+                WordPress 3+, and other applications.
+              </li>
+            </ul>
             <h3 className="major">Hobbies</h3>
             <ul>
               <li>Coding</li>
