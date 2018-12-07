@@ -28,24 +28,22 @@ const Links = [
   },
 ]
 
-const Menu = props => {
-  return (
-    <nav id="menu">
-      <div className="inner">
-        <h2>Menu</h2>
-        <ul className="links">
-          {Links.map(link => (
-            <li key={link.url}>
-              <Link onClick={props.onToggleMenu} to={link.url}>
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <a className="close" onClick={props.onToggleMenu} />
-      </div>
-    </nav>
-  )
-}
+const Menu = props => (
+  <nav id="menu">
+    <div className="inner">
+      <h2>Menu</h2>
+      <ul className="links">
+        {Links.map(link => (
+          <li key={link.url}>
+            <Link onClick={props.onToggleMenu} to={link.url}>
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <a className="close" onClick={props.onToggleMenu} />
+    </div>
+  </nav>
+)
 
 export default Menu
