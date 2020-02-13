@@ -1,91 +1,62 @@
 module.exports = {
   siteMetadata: {
-    title: 'Vertical Latency',
-    author: 'Keith Ort',
     description: 'Modern web site development and search engine optimization.',
     siteUrl: 'https://www.verticallatency.com',
+    title: 'Vertical Latency',
   },
-  pathPrefix: '/',
   plugins: [
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-sass`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-emotion`,
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.ts$|\.tsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop', 'build-javascript'],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Vertical Latency`,
+        short_name: `Vert Lat`,
+        start_url: `/`,
+        background_color: `#2b3a42`,
+        theme_color: `#2b3a42`,
+        display: `minimal-ui`,
+        icon: `static/android-chrome-192x192.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-purgecss',
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        name: `data`,
+        path: `${__dirname}/data`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-plugin-transition-link',
+      options: {
+        layout: `${__dirname}/src/layout/index.tsx`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1080,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-            },
-          },
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-25690656-1',
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
-    `gatsby-plugin-feed`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'Vertical Latency',
-        short_name: 'Vert Lat',
-        start_url: '/',
-        background_color: '#2b3a42',
-        theme_color: '#2b3a42',
-        display: 'minimal-ui',
-        icons: [
-          {
-            src: `/static/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/static/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
+        google: {
+          families: ['Kulim Park', 'Source Sans Pro'],
+        },
       },
     },
   ],
