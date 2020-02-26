@@ -7,8 +7,8 @@ tags:
   - CSS built using Sass
   - Photoshop
   - Flexbox
-abstract: Fresh off my contract with NBCUniversal, I was presented an opportunity to work with another great brand in Haagen-Dazs Ice Cream.
-thumbnail: './21.png'
+description: Fresh off my contract with NBCUniversal, I was presented an opportunity to work with another great brand in Haagen-Dazs Ice Cream.
+featuredImage: 21.png
 employer: Vertical Latency
 ---
 

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Color from 'color'
 
 import styled from '../utils/theme'
 
@@ -21,8 +22,15 @@ const Wrapper = styled('section')`
 `
 
 const Title = styled('div')`
-  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
-  color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid
+    ${() =>
+      Color('#fff')
+        .fade(0.75)
+        .string()};
+  color: ${() =>
+    Color('#fff')
+      .fade(0.05)
+      .string()};
   font-size: 3.5rem;
   font-weight: 700;
   opacity: 1;
@@ -36,7 +44,10 @@ const Title = styled('div')`
   }
 `
 const Description = styled('div')`
-  color: rgba(255, 255, 255, 0.85);
+  color: ${() =>
+    Color('#fff')
+      .fade(0.15)
+      .string()};
   font-size: 1.8rem;
   font-weight: 200;
   opacity: 1;

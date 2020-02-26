@@ -9,8 +9,8 @@ tags:
   - CSS
   - Normalizr
   - JavaScript
-abstract: Their existing web site did not showcase their graphics well so they redesigned their site internally.
-thumbnail: './11.png'
+description: Their existing web site did not showcase their graphics well so they redesigned their site internally.
+featuredImage: 11.png
 employer: Eleet
 ---
 

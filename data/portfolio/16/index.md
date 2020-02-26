@@ -8,8 +8,8 @@ tags:
   - CSS built using Sass
   - Photoshop
   - PHP
-abstract: The new codebase was half the size and created a more usable product for users.
-thumbnail: './16.jpg'
+description: The new codebase was half the size and created a more usable product for users.
+featuredImage: 16.jpg
 employer: NBCUniversal
 ---
 

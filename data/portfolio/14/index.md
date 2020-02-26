@@ -8,8 +8,8 @@ tags:
   - CSS built using Sass with Compass
   - Photoshop
   - JavaScript
-abstract: As the iPad revolution took hold, Field & Stream recognized that a big portion of their web site was unusable for those users.
-thumbnail: './14.png'
+description: As the iPad revolution took hold, Field & Stream recognized that a big portion of their web site was unusable for those users.
+featuredImage: 14.png
 employer: Bonnier
 ---
 

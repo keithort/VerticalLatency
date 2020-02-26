@@ -10,9 +10,12 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 
+import { Contact } from './Contact'
 import styled from '../utils/theme'
 
 const Container = styled('footer')`
+  display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   max-width: ${({ theme }) => theme.breakpoints.md};
   padding: 6rem 2rem 4rem;
@@ -23,13 +26,35 @@ const Container = styled('footer')`
 `
 
 const Intro = styled('div')`
+  flex-basis: 100%;
+
   h2 {
+    border-bottom: 0.2rem solid rgba(255, 255, 255, 0.25);
     color: ${Color('#fff')
       .rgb()
       .fade(0.1)
       .string()};
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  p {
+    color: ${Color('#fff')
+      .rgb()
+      .fade(0.2)
+      .string()};
+    font-size: 1.9rem;
+    margin: 0 0 5rem;
+  }
+`
+
+const ContactForm = styled('div')`
+  flex-basis: 100%;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex-basis: 60%;
+    padding-right: 2rem;
   }
 `
 
@@ -38,21 +63,29 @@ const SocialMedia = styled('div')`
     .rgb()
     .fade(0.1)
     .string()};
+  flex-basis: 100%;
+  padding-top: 5rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex-basis: 40%;
+    padding-left: 2rem;
+  }
 `
 
 const SocialMediaLinks = styled('ul')`
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
-  margin: 1rem 0 0 0;
+  margin: 0;
   padding: 0;
 `
 
 const SocialMediaLink = styled('li')`
-  flex-basis: 26rem;
   font-size: 1.8rem;
-  margin: 0 1rem 1rem 0;
+  margin: 0;
   padding: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
 
   a {
     color: ${Color('#fff')
@@ -61,7 +94,7 @@ const SocialMediaLink = styled('li')`
       .string()};
     text-decoration-skip-ink: auto;
     text-decoration-skip: ink;
-    transition: 0.1s all ease-in-out;
+    transition: 0.2s all ease-in-out;
 
     &:hover {
       color: #fff;
@@ -79,7 +112,7 @@ const Icon = styled('div')`
   line-height: 2.8rem;
   margin-right: 1.25rem;
   text-align: center;
-  transition: 0.1s all ease-in-out;
+  transition: 0.2s all ease-in-out;
   width: 3rem;
 
   a:hover & {
@@ -95,15 +128,22 @@ const Copyright = styled('footer')`
     .string()};
   flex-basis: 100%;
   font-size: 1.6rem;
-  margin: 2rem auto 0;
-  padding-top: 3rem;
+  margin: 4rem auto 0;
+  padding-top: 4rem;
 `
 
 const Footer: React.FunctionComponent<{}> = () => (
   <Container>
     <Intro>
-      <h2>Get In Touch</h2>
+      <h2>GET IN TOUCH</h2>
+      <p>
+        If you have any projects you need help with, reach out and I'll be in
+        touch.
+      </p>
     </Intro>
+    <ContactForm>
+      <Contact />
+    </ContactForm>
     <SocialMedia>
       <SocialMediaLinks>
         <SocialMediaLink>

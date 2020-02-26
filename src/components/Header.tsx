@@ -184,7 +184,7 @@ const Header: React.FunctionComponent<IProps> = ({ scroll, siteTitle }) => {
               window.location.pathname.includes('about') ? 'active' : ''
             }
           >
-            About
+            About Me
           </AniLink>
           <AniLink
             fade
@@ -203,13 +203,6 @@ const Header: React.FunctionComponent<IProps> = ({ scroll, siteTitle }) => {
             }
           >
             Portfolio
-          </AniLink>
-          <AniLink
-            fade
-            to={'/til'}
-            className={window.location.pathname.includes('til') ? 'active' : ''}
-          >
-            TIL
           </AniLink>
         </Nav>
       </HeaderDiv>

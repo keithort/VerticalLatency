@@ -1,7 +1,8 @@
 ---
-title: 'Resume'
-description: 'Professional web development experience since 2005.'
-path: '/resume'
+title: Resume
+description: Professional web development experience since 2005
+layout: page
+path: /resume
 ---
 
 ## Introduction

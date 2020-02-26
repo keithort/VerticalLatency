@@ -3,16 +3,49 @@ const path = require(`path`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const pageTemplate = path.resolve(`src/templates/Page.tsx`)
+  const portfolioTemplate = path.resolve(`src/templates/Portfolio.tsx`)
   return graphql(
     `
       query pagesTemplateQuery {
-        allMarkdownRemark {
+        pages: allMarkdownRemark(
+          filter: { frontmatter: { layout: { eq: "page" } } }
+        ) {
           edges {
             node {
               frontmatter {
-                path
                 description
+                path
                 title
+              }
+              html
+            }
+          }
+        }
+        portfolio: allMarkdownRemark(
+          filter: { frontmatter: { layout: { eq: "portfolio" } } }
+          sort: { fields: frontmatter___date, order: DESC }
+          limit: 10
+        ) {
+          edges {
+            node {
+              frontmatter {
+                description
+                path
+                title
+                featuredImage {
+                  childImageSharp {
+                    fluid(maxHeight: 300, cropFocus: ATTENTION) {
+                      base64
+                      tracedSVG
+                      srcWebp
+                      srcSetWebp
+                      originalImg
+                      originalName
+                      presentationWidth
+                      presentationHeight
+                    }
+                  }
+                }
               }
             }
           }
@@ -25,16 +58,16 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog post pages.
-    result.data.allMarkdownRemark.edges.forEach(edge => {
+    result.data.pages.edges.forEach(edge => {
       createPage({
-        // Path for this page — required
         path: `${edge.node.frontmatter.path}`,
         component: pageTemplate,
-        context: {
-          title: edge.node.frontmatter.title,
-          description: edge.node.frontmatter.description,
-        },
+      })
+    })
+    result.data.portfolio.edges.forEach(edge => {
+      createPage({
+        path: '/portfolio',
+        component: portfolioTemplate,
       })
     })
   })

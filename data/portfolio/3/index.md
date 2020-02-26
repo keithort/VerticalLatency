@@ -9,8 +9,8 @@ tags:
   - Photoshop
   - Responsive web design
   - Google Web Fonts
-thumbnail: './3.png'
-abstract: We were asked to modernize the site in anticipation of the new 2012 season.
+featuredImage: 3.png
+description: We were asked to modernize the site in anticipation of the new 2012 season.
 employer: Bonnier
 ---
 

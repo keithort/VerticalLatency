@@ -9,8 +9,8 @@ tags:
   - Photoshop
   - Responsive web design
   - Google Web Fonts
-thumbnail: './2.jpg'
-abstract: Our team was approached to build the site out to replace an existing, poorly designed and highly cluttered web site with a more modern one.
+featuredImage: 2.jpg
+description: Our team was approached to build the site out to replace an existing, poorly designed and highly cluttered web site with a more modern one.
 employer: Bonnier
 ---
 

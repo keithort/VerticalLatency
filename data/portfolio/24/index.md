@@ -7,8 +7,8 @@ tags:
   - JavaScript
   - Parsley.js
   - HelloSign
-abstract: preDOCS was created to simplify the process of closing on a home.
-thumbnail: '/24.png'
+description: preDOCS was created to simplify the process of closing on a home.
+featuredImage: 24.png
 employer: NextDeal
 ---
 

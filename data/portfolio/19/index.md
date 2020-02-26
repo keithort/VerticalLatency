@@ -10,8 +10,8 @@ tags:
   - PHP
   - Picture Spec
   - Flexbox
-abstract: I used a boilerplate I built to speedup development and turn the project around in record time.
-thumbnail: './19.png'
+description: I used a boilerplate I built to speedup development and turn the project around in record time.
+featuredImage: 19.png
 employer: Vacation Innovations
 ---
 

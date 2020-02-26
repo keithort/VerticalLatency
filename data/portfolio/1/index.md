@@ -8,8 +8,8 @@ tags:
   - CSS built using Sass with Compass
   - Photoshop
   - Google Web Fonts
-thumbnail: './1.jpg'
-abstract: In preparation for the 2013 session, our team was asked to build the new sub site.
+featuredImage: 1.jpg
+description: In preparation for the 2013 session, our team was asked to build the new sub site.
 employer: Bonnier
 ---
 

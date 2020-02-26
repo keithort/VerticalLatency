@@ -9,8 +9,8 @@ tags:
   - Bootstrap 4
   - Emotion
   - React Router
-abstract: The new application has all of the functionality of the previous version while adding the ability to download the completed preDOCS files.
-thumbnail: '/26.png'
+description: The new application has all of the functionality of the previous version while adding the ability to download the completed preDOCS files.
+featuredImage: 26.png
 employer: Vertical Latency
 ---
 

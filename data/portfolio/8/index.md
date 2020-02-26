@@ -7,8 +7,8 @@ tags:
   - Drupal
   - CSS built using Sass with Compass
   - Photoshop
-abstract: We built out a beautiful subsite that accomplished these goals and worked uniformly in all browsers.
-thumbnail: './8.png'
+description: We built out a beautiful subsite that accomplished these goals and worked uniformly in all browsers.
+featuredImage: 8.png
 employer: Bonnier
 ---
 

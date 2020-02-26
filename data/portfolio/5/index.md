@@ -7,8 +7,8 @@ tags:
   - Drupal
   - CSS built using Sass with Compass
   - Photoshop
-thumbnail: './5.png'
-abstract: The site needed an updated header and some elements to be cleaned up.
+featuredImage: 5.png
+description: The site needed an updated header and some elements to be cleaned up.
 employer: Bonnier
 ---
 

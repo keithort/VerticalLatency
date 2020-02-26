@@ -10,8 +10,8 @@ tags:
   - PHP
   - Picture Spec
   - Flexbox
-abstract: The very definition of rapid development, I was tasked with building out the design for the home page and 1 sub page in a couple days in advance of a presentation.
-thumbnail: './20.png'
+description: The very definition of rapid development, I was tasked with building out the design for the home page and 1 sub page in a couple days in advance of a presentation.
+featuredImage: 20.png
 employer: Vacation Innovations
 ---
 

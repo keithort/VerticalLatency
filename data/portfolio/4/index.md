@@ -9,8 +9,8 @@ tags:
   - CSS built using Sass with Compass
   - Normalizr
   - JavaScript
-thumbnail: './4.png'
-abstract: It is fully cross-browser consistent and utilizes built-in features of WordPress menus and templating from custom developed parent theme.
+featuredImage: 4.png
+description: It is fully cross-browser consistent and utilizes built-in features of WordPress menus and templating from custom developed parent theme.
 employer: Vertical Latency
 ---
 

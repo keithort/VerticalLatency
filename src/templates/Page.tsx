@@ -33,7 +33,6 @@ const Wrapper = styled('article')`
 const Container = styled('div')`
   color: ${({ theme }) => theme.colors.lightGrey};
   font-size: 1.8rem;
-  line-height: 1.7;
   margin: 0 auto;
   max-width: ${({ theme }) => theme.breakpoints.md};
   padding: 8rem 2rem;

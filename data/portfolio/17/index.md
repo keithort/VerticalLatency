@@ -8,8 +8,8 @@ tags:
   - CSS built using Sass
   - Photoshop
   - PHP
-thumbnail: './17.png'
-abstract: We needed to update it to be mobile friendly and up to date.
+featuredImage: 17.png
+description: We needed to update it to be mobile friendly and up to date.
 employer: Vacation Innovations
 ---
 

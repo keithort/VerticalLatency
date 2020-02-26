@@ -7,8 +7,8 @@ tags:
   - Drupal
   - CSS
   - Photoshop
-abstract: We built out a tool that had the user answer 4 questions and lead them to their ideal resort or vacation destination.
-thumbnail: './6.png'
+description: We built out a tool that had the user answer 4 questions and lead them to their ideal resort or vacation destination.
+featuredImage: 6.png
 employer: Bonnier
 ---
 

@@ -39,11 +39,31 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
+        name: `pages`,
         path: `${__dirname}/data`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth: 300,
+              wrapperStyle: `clip-path: polygon(0 0, 73% 0, 100% 100%, 27% 100%); 
+                              float: right; 
+                              margin-left: 2rem;
+                              shape-outside: polygon(0 0, 73% 0, 100% 100%, 27% 100%); 
+                              width: 100%;`,
+            },
+          },
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-transition-link',

@@ -7,8 +7,8 @@ tags:
   - CSS built using Sass
   - Flexbox
   - Angular.js
-abstract: NextDeal is primarily an email company reaching out to clients on behalf of title agencies.
-thumbnail: './22.png'
+description: NextDeal is primarily an email company reaching out to clients on behalf of title agencies.
+featuredImage: 22.png
 employer: NextDeal
 ---
 

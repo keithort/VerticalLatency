@@ -6,8 +6,8 @@ path: '/section-notes/'
 tags:
   - AngularJS
   - MongoDB
-abstract: In an effort to improve a learner's experience, we developed the concept of section notes.
-thumbnail: '/25.png'
+description: In an effort to improve a learner's experience, we developed the concept of section notes.
+featuredImage: 25.png
 employer: Digitec
 ---
 

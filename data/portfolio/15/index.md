@@ -7,8 +7,8 @@ tags:
   - Drupal
   - CSS built using Sass with Compass
   - Photoshop
-thumbnail: './15.png'
-abstract: Destination Weddings & Honemoons wanted to engage… the recently engaged.
+featuredImage: 15.png
+description: Destination Weddings & Honemoons wanted to engage… the recently engaged.
 employer: Bonnier
 ---
 

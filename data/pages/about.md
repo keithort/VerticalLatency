@@ -1,10 +1,11 @@
 ---
-title: 'About Me'
-description: 'A little information about me.'
-path: '/about'
+title: About Me
+description: A little additional information about me
+layout: page
+path: /about
 ---
 
-### Professional Overview
+## Professional Overview
 
 Throughout my career, I have established a track record of success by leveraging a collaborative leadership style to accomplish all short- and long-range objectives in diverse roles for web engineering, front end development, and full stack development. I am able to clearly convey complex technical information and propose novel solutions to build consensus with key project stakeholders, including high-value clients and executive leadership.
 
@@ -14,7 +15,7 @@ A small selection of my key projects and accomplishments includes…
 - Front End Developer for NBCUniversal in Orlando, Florida creating immersive user experiences.
 - Excellent technical proficiencies in HTML5, CSS3, JavaScript, React.js, and TypeScript
 
-### Hobbies
+## Hobbies
 
 - Coding
 - Cooking
@@ -23,7 +24,7 @@ A small selection of my key projects and accomplishments includes…
 - Reading
 - Xbox gaming
 
-### Favorites
+## Favorites
 
 - Animal: Penguin
 - Author: Chuck Palahniuk

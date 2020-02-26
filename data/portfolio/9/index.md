@@ -7,8 +7,8 @@ tags:
   - Facebook Pages
   - CSS built using Sass with Compass
   - Photoshop
-thumbnail: './9.png'
-abstract: Through a marketing agency, I was brought on to build out the Facebook page for their new messaging.
+featuredImage: 9.png
+description: Through a marketing agency, I was brought on to build out the Facebook page for their new messaging.
 employer: Vertical Latency
 ---
 

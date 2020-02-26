@@ -6,8 +6,8 @@ path: '/bauer-financial/'
 tags:
   - Wordpress
   - Woocommerce
-abstract: I was subcontracted by another developer to build a new site for Bauer Financial in late 2017.
-thumbnail: '/23.png'
+description: I was subcontracted by another developer to build a new site for Bauer Financial in late 2017.
+featuredImage: 23.png
 employer: Vertical Latency
 ---
 

@@ -15,7 +15,6 @@ const SEO: React.FunctionComponent<IProps> = ({ description, path, title }) => (
         site {
           siteMetadata {
             title
-            description
             siteUrl
           }
         }

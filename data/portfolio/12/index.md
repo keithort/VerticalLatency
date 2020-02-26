@@ -7,8 +7,8 @@ tags:
   - Drupal
   - CSS built using Sass with Compass
   - Photoshop
-abstract: One of the first challenging projects I worked on at Bonnier was an events calendar for Florida Travel & Life magazine.
-thumbnail: './12.png'
+description: One of the first challenging projects I worked on at Bonnier was an events calendar for Florida Travel & Life magazine.
+featuredImage: 12.png
 employer: Bonnier
 ---
 

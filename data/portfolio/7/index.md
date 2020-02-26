@@ -7,8 +7,8 @@ tags:
   - Drupal
   - CSS built using Sass with Compass
   - Photoshop
-abstract: One such possibility was a custom content hub that incorporated paid-for marketing onto an existing brands web site.
-thumbnail: './7.png'
+description: One such possibility was a custom content hub that incorporated paid-for marketing onto an existing brands web site.
+featuredImage: 7.png
 employer: Bonnier
 ---
 

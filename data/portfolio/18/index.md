@@ -8,8 +8,8 @@ tags:
   - CSS built using Sass
   - Photoshop
   - PHP
-abstract: I worked with the team to touch up the new design to render more effectively on smaller device screens while still focusing on converting users into customers.
-thumbnail: './18.png'
+description: I worked with the team to touch up the new design to render more effectively on smaller device screens while still focusing on converting users into customers.
+featuredImage: 18.png
 employer: Vacation Innovations
 ---
 

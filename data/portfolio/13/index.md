@@ -7,8 +7,8 @@ tags:
   - Drupal
   - CSS built using Sass with Compass
   - Photoshop
-abstract: What resulted was a unique web site that engaged users and attracted hundreds of entries.
-thumbnail: './13.png'
+description: What resulted was a unique web site that engaged users and attracted hundreds of entries.
+featuredImage: 13.png
 employer: Bonnier
 ---
 
