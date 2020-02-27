@@ -134,7 +134,7 @@ const Nav = styled('nav')`
       color: #fff;
     }
 
-    &.active {
+    &[aria-current='page'] {
       color: #fff;
       text-decoration-color: ${({ theme }) => theme.colors.orange};
     }
@@ -173,35 +173,27 @@ const Header: React.FunctionComponent<IProps> = ({ scroll, siteTitle }) => {
           <Logo
             src={LogoSquare}
             alt={siteTitle}
-            className={window.location.pathname === '/' ? 'home' : ''}
+            className={
+              typeof window !== 'undefined' && window.location.pathname === '/'
+                ? 'home'
+                : ''
+            }
           />
         </AniLink>
-        <Nav className={window.location.pathname === '/' ? 'home' : ''}>
-          <AniLink
-            fade
-            to={'/about'}
-            className={
-              window.location.pathname.includes('about') ? 'active' : ''
-            }
-          >
+        <Nav
+          className={
+            typeof window !== 'undefined' && window.location.pathname === '/'
+              ? 'home'
+              : ''
+          }
+        >
+          <AniLink fade to={'/about'}>
             About Me
           </AniLink>
-          <AniLink
-            fade
-            to={'/resume'}
-            className={
-              window.location.pathname.includes('resume') ? 'active' : ''
-            }
-          >
+          <AniLink fade to={'/resume'}>
             Resume
           </AniLink>
-          <AniLink
-            fade
-            to={'/portfolio'}
-            className={
-              window.location.pathname.includes('portfolio') ? 'active' : ''
-            }
-          >
+          <AniLink fade to={'/portfolio'}>
             Portfolio
           </AniLink>
         </Nav>

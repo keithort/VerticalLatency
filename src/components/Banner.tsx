@@ -32,7 +32,7 @@ const Title = styled('div')`
     Color('#fff')
       .fade(0.05)
       .string()};
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   opacity: 1;
   transform: translateX(0);
@@ -40,7 +40,15 @@ const Title = styled('div')`
   transition-delay: 0.2s;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: 5rem;
+    font-size: 4.25rem;
+  }
+
+  .home & {
+    font-size: 3.5rem;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      font-size: 5.5rem;
+    }
   }
 
   .is-loading & {
@@ -62,7 +70,15 @@ const Description = styled('div')`
   transition-delay: 0.4s;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .home & {
+    font-size: 2rem;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      font-size: 2.5rem;
+    }
   }
 
   .is-loading & {
@@ -94,7 +110,13 @@ const Banner: React.FunctionComponent<IProps> = ({ description, title }) => {
   }, [currentPage])
 
   return (
-    <Wrapper className={`${isLoading ? 'is-loading' : ''}`}>
+    <Wrapper
+      className={`${isLoading ? 'is-loading' : ''} ${
+        typeof window !== 'undefined' && window.location.pathname === '/'
+          ? 'home'
+          : ''
+      }`}
+    >
       <Title>{title}</Title>
       <Description>{description}</Description>
     </Wrapper>
