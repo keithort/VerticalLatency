@@ -62,8 +62,6 @@ export const portfolioQuery = graphql`
                   tracedSVG
                   srcWebp
                   srcSetWebp
-                  originalImg
-                  originalName
                   presentationWidth
                   presentationHeight
                 }

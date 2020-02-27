@@ -1,6 +1,6 @@
 ---
 title: About Me
-description: A little additional information about me
+description: A few extra details you didn't ask for
 layout: page
 path: /about
 ---
@@ -15,12 +15,15 @@ A small selection of my key projects and accomplishments includes…
 - Front End Developer for NBCUniversal in Orlando, Florida creating immersive user experiences.
 - Excellent technical proficiencies in HTML5, CSS3, JavaScript, React.js, and TypeScript
 
-## Hobbies
+## Hobbies & Interests
 
+- Astronomy
+- Cars
 - Coding
 - Cooking
 - Dad jokes
 - Fishing
+- Pro Wrestling
 - Reading
 - Xbox gaming
 

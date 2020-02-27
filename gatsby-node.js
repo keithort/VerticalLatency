@@ -39,8 +39,6 @@ exports.createPages = ({ graphql, actions }) => {
                       tracedSVG
                       srcWebp
                       srcSetWebp
-                      originalImg
-                      originalName
                       presentationWidth
                       presentationHeight
                     }

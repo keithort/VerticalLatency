@@ -52,7 +52,7 @@ const Wrapper: React.FunctionComponent<{}> = ({ children }) => {
       let padding: number = Math.tan(-3) * (width / 2)
       setVerticalPadding(padding)
     }
-  }, [window.innerWidth])
+  }, [])
 
   return (
     <Skewed>

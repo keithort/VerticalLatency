@@ -9,7 +9,7 @@ interface IProps {
 }
 
 const Wrapper = styled('section')`
-  line-height: 2;
+  line-height: 1.5;
   font-family: ${props => props.theme.fonts.header.join(',')};
   letter-spacing: 0.1em;
   margin: 0 auto;
@@ -39,6 +39,10 @@ const Title = styled('div')`
   transition: 0.25s all ease-in-out;
   transition-delay: 0.2s;
 
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 5rem;
+  }
+
   .is-loading & {
     opacity: 0;
     transform: translateX(1.5rem);
@@ -56,6 +60,10 @@ const Description = styled('div')`
   transform: translateX(0);
   transition: 0.25s all ease-in-out;
   transition-delay: 0.4s;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 2.5rem;
+  }
 
   .is-loading & {
     opacity: 0;

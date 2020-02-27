@@ -1,7 +1,7 @@
 {
   "name": "vertical-latency",
-  "description": "Personal site for Vertical Latency",
-  "version": "2.0.0",
+  "description": "Personal site for Keith Ort",
+  "version": "3.0.0",
   "author": "Keith Ort <keithort@gmail.com>",
   "bugs": {
     "url": "https://github.com/keithort/VerticalLatency/issues"
@@ -30,6 +30,7 @@
     "gatsby-plugin-transition-link": "^1.17.0",
     "gatsby-plugin-typescript": "^2.1.0",
     "gatsby-plugin-web-font-loader": "^1.0.0",
+    "gatsby-remark-color-highlight": "^1.0.2",
     "gatsby-remark-copy-linked-files": "^2.1.0",
     "gatsby-remark-images": "^3.1.0",
     "gatsby-remark-smartypants": "^2.1.0",
