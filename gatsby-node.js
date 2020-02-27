@@ -1,113 +1,72 @@
-const _ = require('lodash')
-const Promise = require('bluebird')
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
+const path = require(`path`)
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
-
-  return new Promise((resolve, reject) => {
-    const portfolioPost = path.resolve('./src/templates/portfolio.js')
-    const articlePost = path.resolve('./src/templates/articles.js')
-    const projectsPost = path.resolve('./src/templates/projects.js')
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(
-              sort: { order: DESC, fields: [frontmatter___date] }
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                    path
-                    layout
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  const pageTemplate = path.resolve(`src/templates/Page.tsx`)
+  const portfolioTemplate = path.resolve(`src/templates/Portfolio.tsx`)
+  return graphql(
+    `
+      query pagesTemplateQuery {
+        pages: allMarkdownRemark(
+          filter: { frontmatter: { layout: { eq: "page" } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                description
+                path
+                title
+              }
+              html
+            }
+          }
+        }
+        portfolio: allMarkdownRemark(
+          filter: { frontmatter: { layout: { eq: "portfolio" } } }
+          sort: { fields: frontmatter___date, order: DESC }
+          limit: 10
+        ) {
+          edges {
+            node {
+              frontmatter {
+                description
+                path
+                title
+                featuredImage {
+                  childImageSharp {
+                    fluid(maxHeight: 300, cropFocus: ATTENTION) {
+                      base64
+                      tracedSVG
+                      srcWebp
+                      srcSetWebp
+                      presentationWidth
+                      presentationHeight
+                    }
                   }
                 }
               }
             }
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          reject(result.errors)
         }
+      }
+    `,
+    { limit: 1000 }
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
 
-        // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges
-        const articles = posts.filter(x => x.node.frontmatter.layout === 'post')
-        const portfolio = posts.filter(
-          x => x.node.frontmatter.layout === 'portfolio'
-        )
-        const projects = posts.filter(
-          x => x.node.frontmatter.layout === 'project'
-        )
-        _.each(portfolio, (post, index) => {
-          const previous =
-            index === portfolio.length - 1 ? null : portfolio[index + 1].node
-          const next = index === 0 ? null : portfolio[index - 1].node
-
-          createPage({
-            path: '/portfolio' + post.node.frontmatter.path,
-            component: portfolioPost,
-            context: {
-              slug: post.node.fields.slug,
-              date: post.node.frontmatter.date,
-              previous,
-              next,
-            },
-          })
-        })
-
-        _.each(articles, (post, index) => {
-          const previous =
-            index === articles.length - 1 ? null : articles[index + 1].node
-          const next = index === 0 ? null : articles[index - 1].node
-
-          createPage({
-            path: '/articles' + post.node.frontmatter.path,
-            component: articlePost,
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
-            },
-          })
-        })
-
-        _.each(projects, (post, index) => {
-          const previous =
-            index === projects.length - 1 ? null : projects[index + 1].node
-          const next = index === 0 ? null : projects[index - 1].node
-
-          createPage({
-            path: '/projects' + post.node.frontmatter.path,
-            component: projectsPost,
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
-            },
-          })
-        })
+    result.data.pages.edges.forEach(edge => {
+      createPage({
+        path: `${edge.node.frontmatter.path}`,
+        component: pageTemplate,
       })
-    )
-  })
-}
-
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
     })
-  }
+    result.data.portfolio.edges.forEach(edge => {
+      createPage({
+        path: '/portfolio',
+        component: portfolioTemplate,
+      })
+    })
+  })
 }
