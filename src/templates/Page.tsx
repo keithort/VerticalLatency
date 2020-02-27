@@ -24,7 +24,13 @@ export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
-    <Main className={window.location.pathname === '/' ? 'home' : ''}>
+    <Main
+      className={
+        typeof window !== 'undefined' && window.location.pathname === '/'
+          ? 'home'
+          : ''
+      }
+    >
       <SEO {...frontmatter} />
 
       <Banner title={frontmatter.title} description={frontmatter.description} />
