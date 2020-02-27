@@ -32,7 +32,7 @@ const theme = {
 }
 
 const Layout: React.FunctionComponent<{}> = ({ children }) => {
-  const [scrollY, setScrollY] = React.useState(0)
+  const [scrollY, setScrollY] = React.useState<number>(0)
 
   React.useEffect(() => {
     const scroller = () => setScrollY(window.scrollY)

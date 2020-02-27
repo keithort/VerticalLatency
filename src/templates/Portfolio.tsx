@@ -1,10 +1,10 @@
 import * as React from 'react'
-import Color from 'color'
 import { graphql } from 'gatsby'
 
 import { Banner } from '../components/Banner'
 import { Project } from '../components/Project'
 import { SEO } from '../components/SEO'
+import { Wrapper } from '../components/Wrapper'
 import styled from '../utils/theme'
 
 const Main = styled('main')`
@@ -21,39 +21,6 @@ const Main = styled('main')`
   }
 `
 
-const Wrapper = styled('article')`
-  background-color: ${({ theme }) =>
-    Color(theme.colors.blue.dark)
-      .rgb()
-      .fade(0.1)
-      .string()};
-  backdrop-filter: blur(3px);
-  transform: rotate(-3deg) skew(-3deg);
-`
-
-const Container = styled('div')`
-  color: ${({ theme }) => theme.colors.lightGrey};
-  font-size: 1.8rem;
-  line-height: 1.7;
-  margin: 0 auto;
-  max-width: ${({ theme }) => theme.breakpoints.md};
-  padding: 8rem 2rem;
-  transform: rotate(3deg) skew(3deg);
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #fff;
-  }
-
-  a {
-    color: ${({ theme }) => theme.colors.orange};
-  }
-`
-
 export default function Template({ data }) {
   const { allMarkdownRemark } = data
   const { edges } = allMarkdownRemark
@@ -67,15 +34,14 @@ export default function Template({ data }) {
       <Banner title={title} description={description} />
 
       <Wrapper>
-        <Container>
-          {edges.map(({ node }) => (
-            <Project {...node.frontmatter} />
-          ))}
-        </Container>
+        {edges.map(({ node }) => (
+          <Project {...node.frontmatter} />
+        ))}
       </Wrapper>
     </Main>
   )
 }
+
 export const portfolioQuery = graphql`
   query {
     allMarkdownRemark(

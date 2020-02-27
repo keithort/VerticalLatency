@@ -15,18 +15,19 @@ const Wrapper = styled('section')`
   margin: 0 auto;
   max-width: ${props => props.theme.breakpoints.md};
   padding: 4rem 2rem 6rem;
+  transform: rotate(-3deg) skew(-3deg);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     padding: 8rem 2rem;
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 `
 
 const Title = styled('div')`
-  border-bottom: 2px solid
-    ${() =>
-      Color('#fff')
-        .fade(0.75)
-        .string()};
   color: ${() =>
     Color('#fff')
       .fade(0.05)
