@@ -31,8 +31,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-purgecss',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
