@@ -20,8 +20,13 @@ const Container = styled('div')`
   margin: 0 auto;
   max-width: ${({ theme }) => theme.breakpoints.md};
   overflow: auto;
-  padding: 8rem 2rem;
+  padding: 8rem 1rem;
   transform: rotate(3deg) skew(3deg);
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     padding-left: 0;
@@ -37,8 +42,27 @@ const Container = styled('div')`
     color: #fff;
   }
 
+  h3 {
+    margin-bottom: 0.5rem;
+    + p {
+      margin-top: 0;
+    }
+  }
+
   a {
     color: ${({ theme }) => theme.colors.orange};
+  }
+
+  .gatsby-resp-image-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  img[src*='headshot.jpg'] {
+    @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+      float: right;
+      \margin-left: 2rem;
+      width: 100%;
+    }
   }
 `
 

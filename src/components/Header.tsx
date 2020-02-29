@@ -17,6 +17,7 @@ const HeaderDiv = styled('header')`
   justify-content: space-between;
   left: 0;
   margin: 0 auto;
+  overflow-x: hidden;
   padding: 1rem;
   position: sticky;
   right: 0;
