@@ -65,12 +65,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-plugin-transition-link',
-      options: {
-        layout: `${__dirname}/src/layout/index.tsx`,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {

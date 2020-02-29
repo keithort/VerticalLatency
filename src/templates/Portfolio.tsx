@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 
 import { Banner } from '../components/Banner'
+import { Layout } from '../components/Layout'
 import { Project } from '../components/Project'
 import { SEO } from '../components/SEO'
 import { Wrapper } from '../components/Wrapper'
@@ -28,17 +29,19 @@ export default function Template({ data }) {
   const description =
     'A sampling of recent projects I have worked on over my 15 year career'
   return (
-    <Main>
-      <SEO title={title} description={description} path="/portfolio" />
+    <Layout>
+      <Main>
+        <SEO title={title} description={description} path="/portfolio" />
 
-      <Banner title={title} description={description} />
+        <Banner title={title} description={description} />
 
-      <Wrapper>
-        {edges.map(({ node }) => (
-          <Project {...node.frontmatter} />
-        ))}
-      </Wrapper>
-    </Main>
+        <Wrapper>
+          {edges.map(({ node }) => (
+            <Project {...node.frontmatter} />
+          ))}
+        </Wrapper>
+      </Main>
+    </Layout>
   )
 }
 
