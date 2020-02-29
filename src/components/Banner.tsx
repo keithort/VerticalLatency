@@ -39,12 +39,20 @@ const Title = styled('div')`
   transition: 0.25s all ease-in-out;
   transition-delay: 0.2s;
 
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: 3.25rem;
+  }
+
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 4.25rem;
   }
 
   .home & {
     font-size: 3.5rem;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+      font-size: 4.25rem;
+    }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
       font-size: 5.5rem;
@@ -69,12 +77,20 @@ const Description = styled('div')`
   transition: 0.25s all ease-in-out;
   transition-delay: 0.4s;
 
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: 1.9rem;
+  }
+
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 2rem;
   }
 
   .home & {
     font-size: 2rem;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+      font-size: 2.25rem;
+    }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
       font-size: 2.5rem;
