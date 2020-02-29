@@ -85,6 +85,7 @@ const Layout: React.FunctionComponent<{}> = ({ children }) => {
                 font-family: ${theme.fonts.body.join(',')};
                 line-height: 1.6;
                 margin: 0;
+                overflow-x: hidden;
                 padding: 0;
               }
 
@@ -95,16 +96,6 @@ const Layout: React.FunctionComponent<{}> = ({ children }) => {
               h5,
               h6 {
                 font-family: ${theme.fonts.header.join(',')};
-              }
-
-              .tl {
-                &-edges {
-                  overflow-x: unset;
-                }
-
-                &-wrapper {
-                  float: none;
-                }
               }
             `}
           />

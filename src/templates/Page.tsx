@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 
 import { Banner } from '../components/Banner'
+import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 import { Wrapper } from '../components/Wrapper'
 import styled from '../utils/theme'
@@ -24,21 +25,26 @@ export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
-    <Main
-      className={
-        typeof window !== 'undefined' && window.location.pathname === '/'
-          ? 'home'
-          : ''
-      }
-    >
-      <SEO {...frontmatter} />
+    <Layout>
+      <Main
+        className={
+          typeof window !== 'undefined' && window.location.pathname === '/'
+            ? 'home'
+            : ''
+        }
+      >
+        <SEO {...frontmatter} />
 
-      <Banner title={frontmatter.title} description={frontmatter.description} />
+        <Banner
+          title={frontmatter.title}
+          description={frontmatter.description}
+        />
 
-      <Wrapper>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </Wrapper>
-    </Main>
+        <Wrapper>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </Wrapper>
+      </Main>
+    </Layout>
   )
 }
 

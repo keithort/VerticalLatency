@@ -31,8 +31,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-purgecss',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
@@ -66,12 +64,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    {
-      resolve: 'gatsby-plugin-transition-link',
-      options: {
-        layout: `${__dirname}/src/layout/index.tsx`,
-      },
-    },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {

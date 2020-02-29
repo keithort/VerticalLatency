@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Color from 'color'
-import { TransitionPortal } from 'gatsby-plugin-transition-link'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Link } from 'gatsby'
 
 import styled from '../utils/theme'
 
@@ -16,10 +15,14 @@ const HeaderDiv = styled('header')`
   align-items: center;
   display: flex;
   justify-content: space-between;
+  left: 0;
   margin: 0 auto;
   padding: 1rem;
+  position: sticky;
+  right: 0;
+  top: 0;
   transition: 0.25s all linear;
-  width: 100vw;
+  z-index: 10;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     padding: 1.5rem;
@@ -162,43 +165,35 @@ const Header: React.FunctionComponent<IProps> = ({ scroll, siteTitle }) => {
   }, [scroll])
 
   return (
-    <TransitionPortal>
-      <HeaderDiv className={addBackground ? 'scrolled' : ''}>
-        <Bars>
-          <div />
-          <div />
-          <div />
-        </Bars>
-        <AniLink fade to={'/'}>
-          <Logo
-            src={LogoSquare}
-            alt={siteTitle}
-            className={
-              typeof window !== 'undefined' && window.location.pathname === '/'
-                ? 'home'
-                : ''
-            }
-          />
-        </AniLink>
-        <Nav
+    <HeaderDiv className={addBackground ? 'scrolled' : ''}>
+      <Bars>
+        <div />
+        <div />
+        <div />
+      </Bars>
+      <Link to={'/'}>
+        <Logo
+          src={LogoSquare}
+          alt={siteTitle}
           className={
             typeof window !== 'undefined' && window.location.pathname === '/'
               ? 'home'
               : ''
           }
-        >
-          <AniLink fade to={'/about'}>
-            About Me
-          </AniLink>
-          <AniLink fade to={'/resume'}>
-            Resume
-          </AniLink>
-          <AniLink fade to={'/portfolio'}>
-            Portfolio
-          </AniLink>
-        </Nav>
-      </HeaderDiv>
-    </TransitionPortal>
+        />
+      </Link>
+      <Nav
+        className={
+          typeof window !== 'undefined' && window.location.pathname === '/'
+            ? 'home'
+            : ''
+        }
+      >
+        <Link to={'/about'}>About Me</Link>
+        <Link to={'/resume'}>Resume</Link>
+        <Link to={'/portfolio'}>Portfolio</Link>
+      </Nav>
+    </HeaderDiv>
   )
 }
 
