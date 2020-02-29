@@ -55,12 +55,10 @@ const Container = styled('div')`
 
   .gatsby-resp-image-wrapper {
     margin-bottom: 1rem;
-  }
 
-  img[src*='headshot.jpg'] {
     @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
       float: right;
-      \margin-left: 2rem;
+      height: 100%;
       width: 100%;
     }
   }

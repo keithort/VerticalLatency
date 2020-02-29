@@ -97,6 +97,22 @@ const Layout: React.FunctionComponent<{}> = ({ children }) => {
               h6 {
                 font-family: ${theme.fonts.header.join(',')};
               }
+
+              h1 {
+                font-size: 2.4rem;
+              }
+
+              h2 {
+                font-size: 2.2rem;
+              }
+
+              h3 {
+                font-size: 2rem;
+              }
+
+              h4 {
+                font-size: 1.8rem;
+              }
             `}
           />
 

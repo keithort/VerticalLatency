@@ -51,7 +51,8 @@ module.exports = {
               linkImagesToOriginal: false,
               maxWidth: 300,
               wrapperStyle: `clip-path: polygon(0 0, 73% 0, 100% 100%, 27% 100%); 
-                              shape-outside: polygon(0 0, 73% 0, 100% 100%, 27% 100%);`,
+                              margin-left: 2rem;
+                              shape-outside: polygon(0 0, 68% 0, 100% 100%, 22% 100%);`,
             },
           },
           'gatsby-remark-copy-linked-files',
