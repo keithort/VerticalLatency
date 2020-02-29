@@ -7,7 +7,7 @@ tags:
   - React
   - MobX
   - Ant Design
-  - Typescript
+  - TypeScript
   - React Router
   - PostCSS
 description: End user application for clients to view account details and documents.

@@ -23,40 +23,40 @@ Technically astute professional with comprehensive knowledge base in diverse com
 
 ## Technical Proficiencies
 
-- HTML5, CSS3, Sass, JavaScript, Drupal 6+, WordPress 3+
+- HTML5, CSS3, JavaScript, TypeScript
 - React.JS, Angular.JS, jQuery
 - Photoshop, Sketch, Balsamiq
 - PHP, Node.JS
 - Git
-- Bootstrap, Foundation for Sites, Foundation for Email
+- Bootstrap, Foundation for Sites, Foundation for Email, MJML
 
 ## Experience
 
 ### Vertical Latency, Remote — _Owner_
 
-#### July 2009 – Present
+July 2009 – Present
 
 Oversee operations for implementing, maintaining, supporting, and designing communication networks and web systems for client list of well-known global brands and national homebuilders. Manage technical support and field engineering services to clients by proactively identifying and resolving technical incidents and problems. Design and launch Internet marketing strategies using SEO, blogs, social media, and content editing. Review performance reports, service improvements, service quality, and processes to achieve client goals.
 
-#### _Achievements_
+_Achievements_
 
 - Created fresh content and design for website and related digital assets for Campbell’s Soup, Ketel One, and Haagen-Daaz.
 - Developed unique approaches to theme development for Wordpress- and Drupal-based sites for APIHub, NextDeal, Programmable Web, Digital Closing Docs, Sassy Pants Boutique, and Digimation.
 
 ### INTL FCStone, Winter Park, FL - _Developer - Front End_
 
-#### January 2019 - Present
+January 2019 - Present
 
-Lead front end developer for Analytic's Vulcan products. Added new features to Pro. Architected Client and Curator front end platforms with React, Typescript, and PostCSS. Created a shared library of UI components, styles, and functionality with Lerna and Storybook with a custom build process using Webpack.
+Lead front end developer for Analytic's Vulcan products. Added new features to Pro. Architected Client and Curator front end platforms with React, TypeScript, and PostCSS. Created a shared library of UI components, styles, and functionality with Lerna and Storybook with a custom build process using Webpack.
 
-#### _Achievements_
+_Achievements_
 
-- Migrated components on Pro to Client and converted them to Typescript
-- Architected 2 new platforms based on React with Typescript
+- Migrated components on Pro to Client and converted them to TypeScript
+- Architected 2 new platforms based on React with TypeScript
 
 ### Digitec Interactive, Orlando, FL — _Senior Software Developer_
 
-#### February 2018 – August 2018
+February 2018 – August 2018
 
 - Development for online LMS, Knowledge Direct
 - Built a note taking system for learners
@@ -64,32 +64,32 @@ Lead front end developer for Analytic's Vulcan products. Added new features to P
 
 ### Digital Closing Docs, Orlando, FL — _Full Stack Web Developer_
 
-#### February 2017 – February 2018
+February 2017 – February 2018
 
 Managed strategies to link design and technology, packaging utility of back end with creative UI interface. Delivered front-end application and code required to run in continuous deployment environment. Demonstrated success in full stack development including iterative code and script development, building server-side web applications using modern programming languages.
 
-#### _Achievements_
+_Achievements_
 
 - Designed multi-page web forms for title agencies with Parsley.js validation, wrote JavaScript to pre-populate values from MySQL database, and integrated HelloSign for document signing.
 - Created email newsletter templates to enable cross-platform consistency.
 
 ### Vacation Innovations, Orlando, FL — _PHP Web Developer_
 
-#### February 2016 – February 2017
+February 2016 – February 2017
 
 Developed, enhanced, and supported web-based application portals for more than 60 sites. Delivered training programs to junior developers assigned to front end development. Applied knowledge of security standards and techniques for web applications. Managed development of prototypes, design specifications, constructive coding, unit testing, and problem resolution.
 
-#### _Achievements_
+_Achievements_
 
 - Designed boilerplate theme used to expedite delivery of WordPress projects
 
 ### NBCUniversal, Orlando, FL — _Front End Developer_
 
-#### January 2014 – November 2015
+January 2014 – November 2015
 
 Team member creating website user-facing code and architecture of immersive user experiences with adept fluencies in HTML, CSS, and Javascript programming using frameworks including Bootstrap, Foundation, Backbone, and Angularjs. Collaborated with designers and back end developers, driving creative input and insertion of design elements for dynamic presentation of company offerings.
 
-#### _Achievements_
+_Achievements_
 
 - Composed new, custom adaptive Drupal 6 theme for GolfChannel.com.
 - Wrote front end code for new landing page featuring major tournaments.
@@ -99,7 +99,7 @@ Team member creating website user-facing code and architecture of immersive user
 
 ### Westgate Resorts, Orlando, FL — _Front End Developer_
 
-#### October 2013 – January 2014
+October 2013 – January 2014
 
 - Modernized front end development methods using Sass and Angular.JS.
 - Worked on the Online Account website for timeshare owners.
@@ -107,27 +107,27 @@ Team member creating website user-facing code and architecture of immersive user
 
 ### Bonnier Corp, Winter Park, FL — _Front End Developer_
 
-#### August 2011 – April 2013
+August 2011 – April 2013
 
 Spearheaded theme development for diverse websites including Outdoor Life, Field & Stream, Islands, and Destination Weddings. Coordinated development and design teams on production of cross browser-consistent Drupal themes.
 
-#### _Achievements_
+_Achievements_
 
 - Deployed CSS for 2013 American Photo Model Shoot, 2013 Deer and Turkey Expos, Total Outdoorsman Challenge 2013, Destination and Resort Finder for Islands Magazine, and Event Calendar for Florida Travel & Life.
 
 ### Eleet Technologies, Oviedo, FL — _IT/Web Engineer_
 
-#### November 2008 – August 2011
+November 2008 – August 2011
 
 Administered small business IT comprising server, networking, end user support, website creation, and SEO. Managed development for client Facebook pages.
 
-#### _Achievements_
+_Achievements_
 
 - Oversaw creative development of websites for Digimation, Morse Agency, City of Debary, Hard Knocks Orlando, Sassy Pants Orlando, Wolf, Hill, McFarlin, and Herron, and Morse Insurance Agency.
 
 ### WebSolvers, Winter Park, FL — _SEO Specialist/Server Admin_
 
-#### January 2005 – November 2008
+January 2005 – November 2008
 
 - Managed SEO and PPC campaigns for various clients.
 - Web development using HTML and CSS for PHP and .NET projects including Workforce Central Florida, The Florida Firm, Tavistock Group, MVP Sportsplex, Lake Nona Golf & Country Club and Rollins College.
