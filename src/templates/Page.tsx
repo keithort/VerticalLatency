@@ -11,10 +11,6 @@ const Main = styled('main')`
   margin: 8rem 0 1.5rem;
   transition: 0.5s margin-top ease-in-out;
 
-  &.home {
-    margin-top: 12rem;
-  }
-
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: 1.8rem;
     margin-top: 20rem;
@@ -26,13 +22,7 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <Main
-        className={
-          typeof window !== 'undefined' && window.location.pathname === '/'
-            ? 'home'
-            : ''
-        }
-      >
+      <Main>
         <SEO {...frontmatter} />
 
         <Banner

@@ -5,9 +5,9 @@ import styled from '../utils/theme'
 
 const Skewed = styled('article')`
   background-color: ${({ theme }) =>
-    Color(theme.colors.blue.dark)
+    Color(theme.colors.blue.mid)
       .rgb()
-      .fade(0.1)
+      .fade(0.2)
       .string()};
   backdrop-filter: blur(3px);
   transform: rotate(-3deg) skew(-3deg);

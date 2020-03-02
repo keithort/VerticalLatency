@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Color from 'color'
-import Img, { GatsbyImageProps } from 'gatsby-image'
+import { GatsbyImageProps } from 'gatsby-image'
+import Img from 'gatsby-image/withIEPolyfill'
 
 import styled from '../utils/theme'
 
@@ -17,12 +18,13 @@ interface ProjectProps {
 const Wrapper = styled('div')`
   background-color: ${({ theme }) =>
     Color(theme.colors.blue.dark)
-      .darken(0.2)
+      .darken(0.3)
+      .alpha(0.3)
       .string()};
   border: 0.1rem solid
     ${({ theme }) =>
-      Color(theme.colors.blue.light)
-        .alpha(0.3)
+      Color(theme.colors.blue.dark)
+        .alpha(0.9)
         .string()};
   border-radius: 0.5rem;
 
@@ -87,9 +89,8 @@ const Project: React.FunctionComponent<ProjectProps> = ({
     <ImageWrapper>
       <Img
         fluid={featuredImage.childImageSharp.fluid}
-        imgStyle={{
-          objectPosition: 'top center',
-        }}
+        objectFit="cover"
+        objectPosition="50% 0"
       />
     </ImageWrapper>
     <ContentWrapper>
