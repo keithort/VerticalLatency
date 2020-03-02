@@ -30,13 +30,23 @@ A small selection of my key projects and accomplishments includes…
 ## Favorites
 
 - Animal: Penguin
+- Artist: M.C. Escher
 - Author: Chuck Palahniuk
 - Band: Linkin Park
 - Book: _Pillars of the Earth_ – Ken Follett
 - Candy: Reese’s Cups
+- Card Game: _Cards Against Humanity_
 - Food: Peanut Butter &amp; Jelly
-- Game: _Cards Against Humanity_
 - Movie: _The Lion King_
-- Show: _Game of Thrones_
+- Song: _Faint_ by Linkin Park
 - Sports: Orlando Magic
-- Video Game: _Portal_ series
+- TV Show: _Game of Thrones_
+
+## Video Games
+
+- Nintendo: _Super Mario Brother 3_
+- Sega Genesis: _Shining Force 2_
+- Super Nintendo: _Crono Trigger_
+- Xbox: _Star Wars: Republic Commando_
+- Xbox 360: _Portal_ series
+- Xbox One: _Assassin's Creed: Odyssey_
