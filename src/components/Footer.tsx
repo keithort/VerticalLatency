@@ -18,7 +18,7 @@ const Container = styled('footer')`
   padding: 6rem 2rem 4rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding-top: 10rem;
+    padding: 10rem 0 4rem;
   }
 `
 
@@ -49,10 +49,17 @@ const SocialMediaLinks = styled('ul')`
 `
 
 const SocialMediaLink = styled('li')`
-  flex-basis: 26rem;
-  font-size: 1.8rem;
-  margin: 0 1rem 1rem 0;
+  font-size: 1.7rem;
+  margin: 0 0 1rem 0;
   padding: 0;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex-basis: 33%;
+  }
 
   a {
     color: ${Color('#fff')
