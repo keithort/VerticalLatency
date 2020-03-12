@@ -8,7 +8,6 @@ const LogoSquare = require('../images/logo-square.png')
 
 export interface IProps {
   siteTitle: string
-  scroll: number
 }
 
 const HeaderDiv = styled('header')`
@@ -32,6 +31,7 @@ const HeaderDiv = styled('header')`
 
 const Bars = styled('div')`
   display: flex;
+  flex-basis: 100%;
   height: 100%;
   left: -5rem;
   position: absolute;
@@ -68,7 +68,7 @@ const Bars = styled('div')`
           .fade(0.05)
           .string()};
       margin-left: -2px;
-      transition-delay: 0.1s;
+      transition-delay: 0.05s;
     }
 
     &:last-child {
@@ -79,7 +79,7 @@ const Bars = styled('div')`
           .fade(0.05)
           .string()};
       margin-left: -2px;
-      transition-delay: 0.2s;
+      transition-delay: 0.1s;
     }
   }
 `
@@ -154,16 +154,21 @@ const Nav = styled('nav')`
   }
 `
 
-const Header: React.FunctionComponent<IProps> = ({ scroll, siteTitle }) => {
+const Header: React.FunctionComponent<IProps> = ({ siteTitle }) => {
   const [addBackground, setAddBackground] = React.useState<boolean>(false)
 
   React.useEffect(() => {
-    if (window.innerWidth < 1000) {
-      setAddBackground(scroll > 75)
-    } else {
-      setAddBackground(scroll > 150)
+    let timeout: ReturnType<typeof setTimeout>
+    const scroller = () => {
+      clearTimeout(timeout)
+      setTimeout(() => {
+        setAddBackground(window.scrollY > 100)
+      }, 100)
     }
-  }, [scroll])
+    window.addEventListener('scroll', scroller)
+
+    return () => window.removeEventListener('scroll', scroller)
+  }, [])
 
   return (
     <HeaderDiv className={addBackground ? 'scrolled' : ''}>

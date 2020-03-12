@@ -5,6 +5,16 @@ layout: page
 path: /resume
 ---
 
+## Professional Overview
+
+Throughout my career, I have established a track record of success by leveraging a collaborative leadership style to accomplish all short- and long-range objectives in diverse roles for web engineering, front end development, and full stack development. I am able to clearly convey complex technical information and propose novel solutions to build consensus with key project stakeholders, including high-value clients and executive leadership.
+
+A small selection of my key projects and accomplishments includes…
+
+- Front End Developer for NBCUniversal in Orlando, Florida creating immersive user experiences.
+- Web Engineer for websites and digital assets for Campbell’s Soup, Ketel One, and Haagen-Daaz.
+- Excellent technical proficiencies in HTML5, CSS3, JavaScript, React.js, and TypeScript
+
 ## Introduction
 
 Technically astute professional with comprehensive knowledge base in diverse complex and sophisticated enterprise applications. Proven track record of systematic, disciplined, and quantifiable approaches to creative development, operation, and maintenance of web-based systems. Solid coding background applied to cutting edge user-interface frameworks, building high quality services and web UIs. Ability to provide fast, agile, and reliable results with excellent functionality and low technical debt.
@@ -29,6 +39,7 @@ Technically astute professional with comprehensive knowledge base in diverse com
 - PHP, Node.JS
 - Git
 - Bootstrap, Foundation for Sites, Foundation for Email, MJML
+- WordPress
 
 ## Experience
 
@@ -52,7 +63,7 @@ Lead front end developer for Analytic's Vulcan products. Added new features to P
 _Achievements_
 
 - Migrated components on Pro to Client and converted them to TypeScript
-- Architected 2 new platforms based on React with TypeScript
+- Architected 2 new applications based on React with TypeScript
 
 ### Digitec Interactive, Orlando, FL — _Senior Software Developer_
 
