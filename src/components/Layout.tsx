@@ -28,15 +28,6 @@ const theme = {
 }
 
 const Layout: React.FunctionComponent<{}> = ({ children }) => {
-  const [scrollY, setScrollY] = React.useState<number>(0)
-
-  React.useEffect(() => {
-    const scroller = () => setScrollY(window.scrollY)
-    window.addEventListener('scroll', scroller)
-
-    return () => window.removeEventListener('scroll', scroller)
-  }, [])
-
   return (
     <StaticQuery
       query={graphql`
