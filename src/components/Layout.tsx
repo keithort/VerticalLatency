@@ -27,7 +27,7 @@ const theme = {
   },
 }
 
-const Layout: React.FunctionComponent<{}> = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <StaticQuery
       query={graphql`

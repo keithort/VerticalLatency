@@ -79,7 +79,7 @@ const Tag = styled('li')`
   }
 `
 
-const Project: React.FunctionComponent<ProjectProps> = ({
+const Project: React.FC<ProjectProps> = ({
   description,
   featuredImage,
   tags,

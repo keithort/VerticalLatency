@@ -106,7 +106,7 @@ const Copyright = styled('footer')`
   padding-top: 3rem;
 `
 
-const Footer: React.FunctionComponent<{}> = () => (
+const Footer: React.FC = () => (
   <Container>
     <Intro>
       <h2>Get In Touch</h2>

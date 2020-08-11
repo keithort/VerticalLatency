@@ -8,7 +8,7 @@ interface IProps {
   title: string
 }
 
-const SEO: React.FunctionComponent<IProps> = ({ description, path, title }) => (
+const SEO: React.FC<IProps> = ({ description, path, title }) => (
   <StaticQuery
     query={graphql`
       {

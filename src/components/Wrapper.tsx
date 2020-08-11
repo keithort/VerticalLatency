@@ -64,7 +64,7 @@ const Container = styled('div')`
   }
 `
 
-const Wrapper: React.FunctionComponent<{}> = ({ children }) => {
+const Wrapper: React.FC = ({ children }) => {
   const containerRef = React.useRef<HTMLDivElement>(null)
   const [verticalPadding, setVerticalPadding] = React.useState<number>(0)
 

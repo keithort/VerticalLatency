@@ -13,24 +13,27 @@ path: /about
 - Cooking
 - Dad jokes
 - Fishing
-- Pro Wrestling
+- Pro wrestling
 - Reading
 - Xbox gaming
+- Vinyl records
 
 ## Favorites
 
 - Animal: Penguin
+- Animated Movie: _The Lion King_
 - Artist: M.C. Escher
-- Author: Chuck Palahniuk
+- Author: Chuck Palahniuk but Brandon Sanderson is coming in hot
 - Band: Linkin Park
 - Book: _Pillars of the Earth_ – Ken Follett
 - Candy: Reese’s Cups
 - Card Game: _Cards Against Humanity_
 - Food: Peanut Butter &amp; Jelly
-- Movie: _The Lion King_
+- Movie: _Dumb &amp; Dumber_
 - Song: _Faint_ by Linkin Park
+- Sorting Method: Alphabetical
 - Sports: Orlando Magic
-- TV Show: _Game of Thrones_
+- TV Series: _Game of Thrones_
 
 ## Video Games
 

@@ -27,9 +27,9 @@ export default function Template({ data }) {
   return (
     <Layout>
       <Main>
-        <SEO title={title} description={description} path="/portfolio" />
+        <SEO description={description} path="/portfolio" title={title} />
 
-        <Banner title={title} description={description} />
+        <Banner description={description} title={title} />
 
         <Wrapper>
           {edges.map(({ node }) => (
