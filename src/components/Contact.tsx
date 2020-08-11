@@ -86,7 +86,7 @@ const Button = styled('button')`
   }
 `
 
-const Contact: React.FunctionComponent<{}> = () => (
+const Contact: React.FC = () => (
   <Wrapper>
     <form
       method="post"

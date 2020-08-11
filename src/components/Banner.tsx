@@ -103,7 +103,7 @@ const Description = styled('div')`
   }
 `
 
-const Banner: React.FunctionComponent<IProps> = ({ description, title }) => {
+const Banner: React.FC<IProps> = ({ description, title }) => {
   const [isLoading, setIsLoading] = React.useState<boolean>(true)
   const [currentPage, setCurrentPage] = React.useState<string>('')
   const wrapperRef = React.useRef<number>()

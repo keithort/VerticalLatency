@@ -154,7 +154,7 @@ const Nav = styled('nav')`
   }
 `
 
-const Header: React.FunctionComponent<IProps> = ({ siteTitle }) => {
+const Header: React.FC<IProps> = ({ siteTitle }) => {
   const [addBackground, setAddBackground] = React.useState<boolean>(false)
 
   React.useEffect(() => {

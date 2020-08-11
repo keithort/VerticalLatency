@@ -26,8 +26,8 @@ export default function Template({ data }) {
         <SEO {...frontmatter} />
 
         <Banner
-          title={frontmatter.title}
           description={frontmatter.description}
+          title={frontmatter.title}
         />
 
         <Wrapper>

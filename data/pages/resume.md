@@ -35,7 +35,7 @@ Technically astute professional with comprehensive knowledge base in diverse com
 
 - HTML5, CSS3, JavaScript, TypeScript
 - React.JS, Angular.JS, jQuery
-- Photoshop, Sketch, Balsamiq
+- Photoshop, Figma, Sketch, Balsamiq
 - PHP, Node.JS
 - Git
 - Bootstrap, Foundation for Sites, Foundation for Email, MJML
@@ -54,16 +54,17 @@ _Achievements_
 - Created fresh content and design for website and related digital assets for Campbell’s Soup, Ketel One, and Haagen-Daaz.
 - Developed unique approaches to theme development for Wordpress- and Drupal-based sites for APIHub, NextDeal, Programmable Web, Digital Closing Docs, Sassy Pants Boutique, and Digimation.
 
-### INTL FCStone, Winter Park, FL - _Developer - Front End_
+### StoneX Group, Winter Park, FL - _Developer - Front End_
 
 January 2019 - Present
 
-Lead front end developer for Analytic's Vulcan products. Added new features to Pro. Architected Client and Curator front end platforms with React, TypeScript, and PostCSS. Created a shared library of UI components, styles, and functionality with Lerna and Storybook with a custom build process using Webpack.
+Lead front end developer for Vulcan products. Handled new and existing front end platforms with React, TypeScript, and PostCSS.
 
 _Achievements_
 
-- Migrated components on Pro to Client and converted them to TypeScript
-- Architected 2 new applications based on React with TypeScript
+- Architected new apps in React with TypeScript using Hooks
+- Created system for CAT trading meeting FINRA regulatory deadlines
+- Migrated existing components to TypeScript
 
 ### Digitec Interactive, Orlando, FL — _Senior Software Developer_
 
