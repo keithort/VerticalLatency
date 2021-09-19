@@ -59,13 +59,7 @@ _Achievements_
 
 _August 2021 - Present_
 
-Lead front end developer for Vulcan products. Handled new and existing front end platforms with React, TypeScript, and PostCSS.
-
-_Achievements_
-
-- Architected new apps in React with TypeScript using Hooks
-- Created system for CAT trading meeting FINRA regulatory deadlines
-- Migrated existing components to TypeScript
+Front end developer for the Analytics pod
 
 ### StoneX Group, Winter Park, FL - _Developer - Front End_
 
