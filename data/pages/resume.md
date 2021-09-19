@@ -11,6 +11,7 @@ Throughout my career, I have established a track record of success by leveraging
 
 A small selection of my key projects and accomplishments includes…
 
+- Lead a team of front-end developers at StoneX on the Analytics division
 - Front End Developer for NBCUniversal in Orlando, Florida creating immersive user experiences.
 - Web Engineer for websites and digital assets for Campbell’s Soup, Ketel One, and Haagen-Daaz.
 - Excellent technical proficiencies in HTML5, CSS3, JavaScript, React.js, and TypeScript
@@ -45,7 +46,7 @@ Technically astute professional with comprehensive knowledge base in diverse com
 
 ### Vertical Latency, Remote — _Owner_
 
-July 2009 – Present
+_July 2009 – Present_
 
 Oversee operations for implementing, maintaining, supporting, and designing communication networks and web systems for client list of well-known global brands and national homebuilders. Manage technical support and field engineering services to clients by proactively identifying and resolving technical incidents and problems. Design and launch Internet marketing strategies using SEO, blogs, social media, and content editing. Review performance reports, service improvements, service quality, and processes to achieve client goals.
 
@@ -54,9 +55,9 @@ _Achievements_
 - Created fresh content and design for website and related digital assets for Campbell’s Soup, Ketel One, and Haagen-Daaz.
 - Developed unique approaches to theme development for Wordpress- and Drupal-based sites for APIHub, NextDeal, Programmable Web, Digital Closing Docs, Sassy Pants Boutique, and Digimation.
 
-### StoneX Group, Winter Park, FL - _Developer - Front End_
+### Hopin, Remote - _Staff Engineer_
 
-January 2019 - Present
+_August 2021 - Present_
 
 Lead front end developer for Vulcan products. Handled new and existing front end platforms with React, TypeScript, and PostCSS.
 
@@ -66,9 +67,21 @@ _Achievements_
 - Created system for CAT trading meeting FINRA regulatory deadlines
 - Migrated existing components to TypeScript
 
+### StoneX Group, Winter Park, FL - _Developer - Front End_
+
+_January 2019 - August 2021_
+
+Lead front end developer for Vulcan products. Handled new and existing front end platforms with React, TypeScript, and PostCSS.
+
+_Achievements_
+
+- Architected new apps in React with TypeScript
+- Created feature for CAT compliant trading meeting FINRA regulatory deadlines
+- Migrated existing app components to TypeScript
+
 ### Digitec Interactive, Orlando, FL — _Senior Software Developer_
 
-February 2018 – August 2018
+_February 2018 – August 2018_
 
 - Development for online LMS, Knowledge Direct
 - Built a note taking system for learners
@@ -76,7 +89,7 @@ February 2018 – August 2018
 
 ### Digital Closing Docs, Orlando, FL — _Full Stack Web Developer_
 
-February 2017 – February 2018
+_February 2017 – February 2018_
 
 Managed strategies to link design and technology, packaging utility of back end with creative UI interface. Delivered front-end application and code required to run in continuous deployment environment. Demonstrated success in full stack development including iterative code and script development, building server-side web applications using modern programming languages.
 
@@ -87,7 +100,7 @@ _Achievements_
 
 ### Vacation Innovations, Orlando, FL — _PHP Web Developer_
 
-February 2016 – February 2017
+_February 2016 – February 2017_
 
 Developed, enhanced, and supported web-based application portals for more than 60 sites. Delivered training programs to junior developers assigned to front end development. Applied knowledge of security standards and techniques for web applications. Managed development of prototypes, design specifications, constructive coding, unit testing, and problem resolution.
 
@@ -97,7 +110,7 @@ _Achievements_
 
 ### NBCUniversal, Orlando, FL — _Front End Developer_
 
-January 2014 – November 2015
+_January 2014 – November 2015_
 
 Team member creating website user-facing code and architecture of immersive user experiences with adept fluencies in HTML, CSS, and Javascript programming using frameworks including Bootstrap, Foundation, Backbone, and Angularjs. Collaborated with designers and back end developers, driving creative input and insertion of design elements for dynamic presentation of company offerings.
 
@@ -111,7 +124,7 @@ _Achievements_
 
 ### Westgate Resorts, Orlando, FL — _Front End Developer_
 
-October 2013 – January 2014
+_October 2013 – January 2014_
 
 - Modernized front end development methods using Sass and Angular.JS.
 - Worked on the Online Account website for timeshare owners.
@@ -119,7 +132,7 @@ October 2013 – January 2014
 
 ### Bonnier Corp, Winter Park, FL — _Front End Developer_
 
-August 2011 – April 2013
+_August 2011 – April 2013_
 
 Spearheaded theme development for diverse websites including Outdoor Life, Field & Stream, Islands, and Destination Weddings. Coordinated development and design teams on production of cross browser-consistent Drupal themes.
 
@@ -129,7 +142,7 @@ _Achievements_
 
 ### Eleet Technologies, Oviedo, FL — _IT/Web Engineer_
 
-November 2008 – August 2011
+_November 2008 – August 2011_
 
 Administered small business IT comprising server, networking, end user support, website creation, and SEO. Managed development for client Facebook pages.
 
@@ -139,7 +152,7 @@ _Achievements_
 
 ### WebSolvers, Winter Park, FL — _SEO Specialist/Server Admin_
 
-January 2005 – November 2008
+_January 2005 – November 2008_
 
 - Managed SEO and PPC campaigns for various clients.
 - Web development using HTML and CSS for PHP and .NET projects including Workforce Central Florida, The Florida Firm, Tavistock Group, MVP Sportsplex, Lake Nona Golf & Country Club and Rollins College.

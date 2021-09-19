@@ -22,8 +22,8 @@ export default function Template({ data }) {
   const { allMarkdownRemark } = data
   const { edges } = allMarkdownRemark
   const title = 'Portfolio'
-  const description =
-    'A sampling of recent projects I have worked on over my 15 year career'
+  const description = `A sampling of public projects I have worked on over my ${new Date().getFullYear() -
+    2005}+ year career`
   return (
     <Layout>
       <Main>

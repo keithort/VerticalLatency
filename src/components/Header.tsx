@@ -155,15 +155,15 @@ const Nav = styled('nav')`
 `
 
 const Header: React.FC<IProps> = ({ siteTitle }) => {
-  const [addBackground, setAddBackground] = React.useState<boolean>(false)
+  const [addBackground, setAddBackground] = React.useState(false)
 
   React.useEffect(() => {
-    let timeout: ReturnType<typeof setTimeout>
+    let timeout: ReturnType<typeof requestAnimationFrame>
     const scroller = () => {
-      clearTimeout(timeout)
-      setTimeout(() => {
+      cancelAnimationFrame(timeout)
+      timeout = requestAnimationFrame(() => {
         setAddBackground(window.scrollY > 100)
-      }, 100)
+      })
     }
     window.addEventListener('scroll', scroller)
 
