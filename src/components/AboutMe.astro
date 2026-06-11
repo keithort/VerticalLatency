@@ -1,0 +1,54 @@
+---
+---
+
+<section class="panel" id="about">
+  <h2 class="sec-h cyan"><span class="gico">👾</span><span class="txt">About Me</span></h2>
+  <p class="sec-sub">a.k.a. Keith Ort, the human behind the marquee</p>
+  <p class="lead">I'm a <b>web developer</b> based in Central Florida, building fast, accessible interfaces with <b>TypeScript</b> and <b>React</b>. Over two decades I've shipped everything from enterprise checkout flows to hand-crafted <b>WordPress &amp; WooCommerce</b> themes — always with a soft spot for clean UI design principles and the occasional spinning star.</p>
+</section>
+
+<style>
+  .panel {
+    background: linear-gradient(180deg, var(--color-panel), var(--color-bg2));
+    border: 2px solid var(--color-hr);
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px rgba(22,240,224,.10), 0 18px 40px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04);
+    padding: 26px 28px;
+    margin: 20px 0;
+  }
+  .sec-h {
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    font-size: clamp(23px, 3.6vw, 33px);
+    margin: 0 0 4px;
+    line-height: 1.12;
+    color: #fff;
+    display: block;
+    text-wrap: balance;
+  }
+  .sec-h .gico {
+    font-size: .86em;
+    filter: drop-shadow(0 0 6px currentColor);
+    display: inline-block;
+    vertical-align: -2px;
+    margin-right: 11px;
+  }
+  .sec-h .txt {
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background: linear-gradient(transparent 62%, rgba(255,54,208,.42) 62%, rgba(255,54,208,.42) 90%, transparent 90%);
+    padding: 0 3px;
+  }
+  .sec-h.cyan {
+    color: var(--color-neon1);
+    text-shadow: 0 0 12px rgba(22,240,224,.55);
+  }
+  .sec-sub {
+    color: var(--color-ink2);
+    font-size: 15px;
+    margin: 0 0 16px;
+  }
+  .lead { font-size: 17px; }
+  .lead b { color: var(--color-neon1); }
+</style>

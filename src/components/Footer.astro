@@ -1,0 +1,87 @@
+---
+const digits = ['0', '0', '4', '2', '8', '9', '1'];
+---
+
+<footer>
+  <div class="counter">
+    <div class="leds">
+      {digits.map(d => (
+        <b>{d}</b>
+      ))}
+    </div>
+    <small>Visitors since 1999</small>
+  </div>
+  <div class="badge">Best viewed in<br />Netscape Navigator 4.0 @ 800×600</div>
+  <div class="copyright">© 2009–2026 Vertical Latency<br />All rights reserved.</div>
+</footer>
+
+<style>
+  footer {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .counter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+  .leds {
+    display: inline-flex;
+    gap: 3px;
+    background: #0c0405;
+    border: 2px solid #3a1f22;
+    border-radius: 6px;
+    padding: 6px 8px;
+    box-shadow: inset 0 0 8px #000;
+  }
+  .leds b {
+    font-family: "VT323", monospace;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+    color: #ff5a4d;
+    background: #1c0708;
+    border-radius: 2px;
+    padding: 0 4px;
+    text-shadow: 0 0 8px rgba(255,90,77,.9);
+  }
+  .counter small {
+    font-family: "VT323", monospace;
+    font-size: 15px;
+    color: var(--color-ink2);
+    letter-spacing: 1px;
+  }
+  .badge {
+    font-family: "VT323", monospace;
+    font-size: 15px;
+    color: var(--color-ink2);
+    border: 1px solid var(--color-hr);
+    border-radius: 6px;
+    padding: 7px 11px;
+    line-height: 1.35;
+    text-align: center;
+    background: rgba(0,0,0,.25);
+  }
+  .copyright {
+    font-family: "VT323", monospace;
+    font-size: 15px;
+    color: var(--color-ink2);
+    text-align: right;
+    letter-spacing: .5px;
+  }
+
+  @media (max-width: 680px) {
+    footer {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+    .counter { align-items: center; }
+    .copyright { text-align: center; }
+  }
+</style>

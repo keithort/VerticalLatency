@@ -1,0 +1,90 @@
+---
+const navItems = [
+  { label: 'About Me', href: '#about' },
+  { label: 'Resume', href: '#resume' },
+  { label: 'Contact', href: '#contact' },
+];
+---
+
+<header class="hero" id="top">
+  <h1 class="logo"><span class="star">★</span>Vertical Latency</h1>
+  <p class="tagline">Modern Web Development</p>
+  <p class="since">Central Florida · Since 2005</p>
+  <nav class="main">
+    {navItems.map(item => (
+      <a href={item.href}>{item.label}</a>
+    ))}
+  </nav>
+</header>
+
+<style>
+  .hero { text-align: center; padding-top: 34px; }
+  .logo {
+    font-family: "Monoton", cursive;
+    font-size: clamp(40px, 8.5vw, 86px);
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow:
+      0 0 6px #fff,
+      0 0 16px var(--color-neon1),
+      0 0 32px var(--color-neon1),
+      0 0 54px rgba(22,240,224,.7);
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: .28em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .logo .star {
+    font-family: "Trebuchet MS", sans-serif;
+    color: var(--color-neon3);
+    text-shadow: 0 0 10px var(--color-neon3), 0 0 22px rgba(255,229,61,.7);
+    display: inline-block;
+    animation: spin 3.6s linear infinite;
+    font-size: .62em;
+  }
+  .tagline {
+    font-family: "VT323", monospace;
+    font-size: clamp(16px, 2.4vw, 24px);
+    color: var(--color-neon2);
+    text-shadow: 0 0 8px rgba(255,54,208,.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 14px 0 0;
+  }
+  .since {
+    font-family: "VT323", monospace;
+    color: var(--color-ink2);
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+  nav.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 22px;
+  }
+  nav.main a {
+    font-family: "VT323", monospace;
+    font-size: 21px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--color-ink);
+    background: rgba(22,240,224,.06);
+    border: 2px solid var(--color-neon1);
+    border-radius: 8px;
+    padding: 6px 18px;
+    box-shadow: 0 0 10px rgba(22,240,224,.25), inset 0 0 8px rgba(22,240,224,.12);
+    transition: transform .1s ease, background .1s ease, color .1s ease;
+  }
+  nav.main a:hover {
+    transform: translateY(-2px);
+    background: var(--color-neon1);
+    color: #06061a;
+    box-shadow: 0 0 18px var(--color-neon1);
+  }
+</style>
