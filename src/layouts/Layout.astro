@@ -1,4 +1,5 @@
 ---
+import { Font } from 'astro:assets';
 import '../styles/global.css';
 
 interface Props {
@@ -24,9 +25,8 @@ const { title = 'Vertical Latency :: Keith Ort, Web Developer', description = 'M
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#16f0e0" />
     <meta name="msapplication-TileColor" content="#070617" />
     <meta name="theme-color" content="#070617" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=VT323&display=swap" rel="stylesheet" />
+    <Font cssVariable="--font-monoton" preload />
+    <Font cssVariable="--font-vt323" preload />
     <title>{title}</title>
   </head>
   <body data-font="neon" data-motion="max">
