@@ -13,8 +13,7 @@
   --color-ink2: #a7a3d6;
   --color-hr: #2b2566;
 
-  --font-monoton: "Monoton", cursive;
-  --font-vt323: "VT323", monospace;
+  /* --font-monoton and --font-vt323 are injected by Astro's <Font> component */
   --font-body: "Trebuchet MS", "Verdana", sans-serif;
 }
 
@@ -116,7 +115,7 @@ body.motion-paused .marquee .track { padding-left: 0 !important; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: "VT323", monospace;
+  font-family: var(--font-vt323);
   font-size: 17px;
   letter-spacing: .5px;
   color: var(--color-ink);
