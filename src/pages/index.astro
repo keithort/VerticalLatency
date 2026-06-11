@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Marquee from '../components/Marquee.astro';
+import FlameDivider from '../components/FlameDivider.astro';
+import AboutMe from '../components/AboutMe.astro';
+import UselessInfo from '../components/UselessInfo.astro';
+import Timeline from '../components/Timeline.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <div class="page">
+    <Header />
+    <Marquee />
+    <AboutMe />
+    <FlameDivider />
+    <UselessInfo />
+    <FlameDivider />
+    <Timeline />
+    <FlameDivider />
+    <Contact />
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .page {
+    position: relative;
+    z-index: 1;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 26px 18px 60px;
+  }
+
+  @media (max-width: 680px) {
+    .page { padding: 18px 12px 50px; }
+  }
+</style>

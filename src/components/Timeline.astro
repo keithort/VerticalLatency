@@ -1,0 +1,309 @@
+---
+interface Role {
+  company: string;
+  title: string;
+  dates: string;
+  bullets: string[];
+  side: 'left' | 'right';
+}
+
+const roles: Role[] = [
+  {
+    company: 'PayPal',
+    title: 'Staff Software Engineer · Remote',
+    dates: 'Sep 2022 — Present',
+    bullets: [
+      'Build reusable React/TypeScript components for global checkout on Next.js.',
+      'Drive performance & accessibility standards across product teams.',
+      'Author Playwright E2E suites and mentor engineers on testing.',
+    ],
+    side: 'left',
+  },
+  {
+    company: 'Vertical Latency',
+    title: 'Owner / Principal Developer · Remote',
+    dates: 'Jul 2009 — 2022',
+    bullets: [
+      'Founded a boutique studio serving national brands & Florida homebuilders.',
+      'Designed & shipped custom WordPress & WooCommerce themes end-to-end.',
+      'Partnered with clients on UX, branding, and ongoing support.',
+    ],
+    side: 'right',
+  },
+  {
+    company: 'Hopin',
+    title: 'Staff Engineer · Remote',
+    dates: 'Aug 2021 — Jul 2022',
+    bullets: [
+      'Joined the analytics pod during hyper-growth scaling.',
+      'Built data-dense dashboards in React & TypeScript.',
+      'Shaped component library and front-end conventions.',
+    ],
+    side: 'left',
+  },
+  {
+    company: 'StoneX Group',
+    title: 'Front End Developer · Winter Park, FL',
+    dates: 'Jan 2019 — Aug 2021',
+    bullets: [
+      'Developed UI for trading and account-management platforms.',
+      'Migrated legacy interfaces to React + TypeScript.',
+      'Collaborated with design on a shared component system.',
+    ],
+    side: 'right',
+  },
+  {
+    company: 'Digitec Interactive',
+    title: 'Senior Developer · Orlando, FL',
+    dates: 'Feb — Aug 2018',
+    bullets: [
+      'Built responsive course UIs for the Knowledge Direct LMS.',
+      'Improved page performance and cross-browser support.',
+      'Delivered admin tooling for content authors.',
+    ],
+    side: 'left',
+  },
+];
+
+const condensedRoles = [
+  { company: 'Digital Closing Docs', meta: 'Full Stack · Orlando', dates: '2017–2018' },
+  { company: 'Vacation Innovations', meta: 'PHP Web Dev · Orlando', dates: '2016–2017' },
+  { company: 'NBCUniversal', meta: 'Front End · Orlando', dates: '2014–2015' },
+  { company: 'Westgate Resorts', meta: 'Front End · Orlando', dates: '2013–2014' },
+  { company: 'Bonnier Corp', meta: 'Front End · Winter Park', dates: '2011–2013' },
+  { company: 'Eleet Technologies', meta: 'IT / Web · Oviedo', dates: '2008–2011' },
+  { company: 'WebSolvers', meta: 'SEO / Server · Winter Park', dates: '2005–2008' },
+];
+---
+
+<section class="panel" id="resume">
+  <h2 class="sec-h cyan"><span class="gico">💾</span><span class="txt">Work History</span></h2>
+  <p class="sec-sub"><span class="uc"><span class="b">🚧</span> always under construction · updated 2026</span></p>
+
+  <div class="spine">
+    {roles.map(role => (
+      <div class={`tl ${role.side}`}>
+        <div class="card">
+          <div class="ctop">
+            <span class="co">{role.company}</span>
+            <span class="dt">{role.dates}</span>
+          </div>
+          <div class="role">{role.title}</div>
+          <ul>
+            {role.bullets.map(b => (
+              <li><span class="ar">▸</span><span>{b}</span></li>
+            ))}
+          </ul>
+        </div>
+        <div class="gap"></div>
+        <div class="node"></div>
+      </div>
+    ))}
+  </div>
+
+  <div class="cond-h">— earlier missions, 2005–2018 —</div>
+  <div class="cond">
+    {condensedRoles.map(role => (
+      <div class="row">
+        <b>{role.company}</b>
+        <span class="m" set:html={`${role.meta}<br>${role.dates}`} />
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .panel {
+    background: linear-gradient(180deg, var(--color-panel), var(--color-bg2));
+    border: 2px solid var(--color-hr);
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px rgba(22,240,224,.10), 0 18px 40px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04);
+    padding: 26px 28px;
+    margin: 20px 0;
+  }
+  .sec-h {
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    font-size: clamp(23px, 3.6vw, 33px);
+    margin: 0 0 4px;
+    line-height: 1.12;
+    color: #fff;
+    display: block;
+    text-wrap: balance;
+  }
+  .sec-h .gico {
+    font-size: .86em;
+    filter: drop-shadow(0 0 6px currentColor);
+    display: inline-block;
+    vertical-align: -2px;
+    margin-right: 11px;
+  }
+  .sec-h .txt {
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background: linear-gradient(transparent 62%, rgba(255,54,208,.42) 62%, rgba(255,54,208,.42) 90%, transparent 90%);
+    padding: 0 3px;
+  }
+  .sec-h.cyan {
+    color: var(--color-neon1);
+    text-shadow: 0 0 12px rgba(22,240,224,.55);
+  }
+  .sec-sub {
+    color: var(--color-ink2);
+    font-size: 15px;
+    margin: 0 0 16px;
+  }
+  .uc {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: "VT323", monospace;
+    font-size: 19px;
+    color: var(--color-neon3);
+    letter-spacing: 1px;
+  }
+  .uc .b { animation: blink 1s steps(1) infinite; }
+
+  /* Timeline spine */
+  .spine {
+    position: relative;
+    margin: 18px 0 6px;
+    padding: 8px 0;
+  }
+  .spine::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    transform: translateX(-50%);
+    background: linear-gradient(var(--color-neon1), var(--color-neon2));
+    box-shadow: 0 0 12px rgba(22,240,224,.6);
+  }
+  .tl {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr);
+    align-items: start;
+    margin: 6px 0;
+  }
+  .tl .node {
+    grid-column: 2;
+    justify-self: center;
+    margin-top: 20px;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-neon3);
+    border: 3px solid #0a0420;
+    box-shadow: 0 0 0 3px var(--color-neon3), 0 0 16px var(--color-neon3);
+  }
+  .tl .gap { min-width: 0; }
+  .tl.left .card { grid-column: 1; margin-right: 6px; }
+  .tl.left .gap { grid-column: 3; }
+  .tl.right .card { grid-column: 3; margin-left: 6px; }
+  .tl.right .gap { grid-column: 1; }
+  .card {
+    min-width: 0;
+    position: relative;
+    background: linear-gradient(180deg, var(--color-panel2), var(--color-panel));
+    border: 2px solid var(--color-neon1);
+    border-radius: 12px;
+    padding: 15px 17px;
+    box-shadow: 0 0 16px rgba(22,240,224,.18), 0 10px 24px rgba(0,0,0,.4);
+  }
+  .tl.right .card {
+    border-color: var(--color-neon2);
+    box-shadow: 0 0 16px rgba(255,54,208,.18), 0 10px 24px rgba(0,0,0,.4);
+  }
+  .card .ctop { display: block; margin-bottom: 7px; }
+  .card .co {
+    display: block;
+    font-family: "VT323", monospace;
+    font-size: 25px;
+    letter-spacing: .5px;
+    color: var(--color-neon1);
+    line-height: 1.08;
+    text-shadow: 0 0 8px rgba(22,240,224,.5);
+  }
+  .tl.right .card .co {
+    color: var(--color-neon2);
+    text-shadow: 0 0 8px rgba(255,54,208,.5);
+  }
+  .card .dt {
+    display: block;
+    font-family: "VT323", monospace;
+    font-size: 15px;
+    color: var(--color-ink2);
+    margin-top: 2px;
+  }
+  .card .role {
+    font-size: 14px;
+    color: var(--color-ink2);
+    margin: 0 0 9px;
+    font-style: italic;
+  }
+  .card ul { list-style: none; margin: 0; padding: 0; }
+  .card li {
+    display: flex;
+    gap: 8px;
+    font-size: 14.5px;
+    padding: 3px 0;
+    color: var(--color-ink);
+  }
+  .card li .ar {
+    color: var(--color-neon4);
+    line-height: 1.4;
+  }
+
+  /* Condensed older roles */
+  .cond-h {
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    color: var(--color-ink2);
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 26px 0 12px;
+  }
+  .cond {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 18px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .cond .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+    border-bottom: 1px dotted var(--color-hr);
+    padding: 7px 2px;
+  }
+  .cond .row b {
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    color: var(--color-neon3);
+    font-weight: normal;
+    letter-spacing: .5px;
+  }
+  .cond .row .m {
+    font-size: 12.5px;
+    color: var(--color-ink2);
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  /* Responsive */
+  @media (max-width: 680px) {
+    .panel { padding: 20px 16px; }
+    .cond { grid-template-columns: 1fr; max-width: none; }
+    .spine::before { left: 14px; }
+    .tl { grid-template-columns: 34px minmax(0, 1fr); }
+    .tl .node { grid-column: 1; justify-self: start; margin-left: 5px; }
+    .tl.left .card, .tl.right .card { grid-column: 2; margin: 0; }
+    .tl .gap { display: none; }
+  }
+</style>

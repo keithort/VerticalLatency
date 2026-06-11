@@ -1,0 +1,92 @@
+---
+const links = [
+  { icon: '✉️', label: 'keith@verticallatency.com', href: 'mailto:keith@verticallatency.com' },
+  { icon: '🐙', label: 'github.com/keithort', href: 'https://github.com/keithort' },
+  { icon: '💼', label: 'linkedin.com/in/keith-ort', href: 'https://linkedin.com/in/keith-ort' },
+  { icon: '📚', label: 'goodreads.com/keithort', href: 'https://goodreads.com/keithort' },
+];
+---
+
+<section class="panel" id="contact">
+  <h2 class="sec-h yel"><span class="gico">📡</span><span class="txt">Get In Touch</span></h2>
+  <p class="sec-sub">drop a line — no guestbook required</p>
+  <div class="contact-links">
+    {links.map(link => (
+      <a href={link.href}>
+        <span class="ic">{link.icon}</span>{link.label}
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .panel {
+    background: linear-gradient(180deg, var(--color-panel), var(--color-bg2));
+    border: 2px solid var(--color-hr);
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px rgba(22,240,224,.10), 0 18px 40px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04);
+    padding: 26px 28px;
+    margin: 20px 0;
+  }
+  .sec-h {
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    font-size: clamp(23px, 3.6vw, 33px);
+    margin: 0 0 4px;
+    line-height: 1.12;
+    color: #fff;
+    display: block;
+    text-wrap: balance;
+  }
+  .sec-h .gico {
+    font-size: .86em;
+    filter: drop-shadow(0 0 6px currentColor);
+    display: inline-block;
+    vertical-align: -2px;
+    margin-right: 11px;
+  }
+  .sec-h .txt {
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background: linear-gradient(transparent 62%, rgba(255,54,208,.42) 62%, rgba(255,54,208,.42) 90%, transparent 90%);
+    padding: 0 3px;
+  }
+  .sec-h.yel {
+    color: var(--color-neon3);
+    text-shadow: 0 0 12px rgba(255,229,61,.55);
+  }
+  .sec-sub {
+    color: var(--color-ink2);
+    font-size: 15px;
+    margin: 0 0 16px;
+  }
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 6px;
+  }
+  .contact-links a {
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: 2px solid var(--color-neon4);
+    border-radius: 10px;
+    padding: 8px 15px;
+    color: var(--color-ink);
+    background: rgba(93,255,122,.06);
+    box-shadow: 0 0 10px rgba(93,255,122,.2);
+    transition: transform .1s, background .1s, color .1s;
+  }
+  .contact-links a:hover {
+    transform: translateY(-2px);
+    background: var(--color-neon4);
+    color: #062012;
+    box-shadow: 0 0 16px var(--color-neon4);
+  }
+  .contact-links a .ic { font-size: 18px; }
+</style>

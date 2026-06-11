@@ -1,0 +1,206 @@
+---
+const hobbies = [
+  'Astronomy',
+  'Car tuning',
+  'Coding',
+  'Cooking',
+  'Dad jokes',
+  'Fishing',
+  'Pro wrestling',
+  'Reading',
+  'Xbox gaming',
+  'Vinyl records',
+  'Woodworking',
+];
+
+const favorites = [
+  { label: 'Actor', value: 'Nicolas Cage' },
+  { label: 'Animal', value: 'Penguin' },
+  { label: 'Animated Movie', value: 'Lilo & Stitch' },
+  { label: 'Artist', value: 'M.C. Escher' },
+  { label: 'Author', value: 'Matt Dinniman' },
+  { label: 'Band', value: 'Linkin Park' },
+  { label: 'Book', value: 'Anxious People by Fredrik Backman' },
+  { label: 'Book Series', value: 'Dungeon Crawler Carl' },
+  { label: 'Candy', value: 'Reese’s Cups' },
+  { label: 'Card Game', value: 'Cards Against Humanity' },
+  { label: 'Communication Method', value: 'Memes' },
+  { label: 'Fast Food', value: 'Taco Bell' },
+  { label: 'Food', value: 'Peanut Butter & Jelly' },
+  { label: 'Movie', value: 'Dumb & Dumber' },
+  { label: 'Song', value: 'Faint by Linkin Park' },
+  { label: 'Sorting Method', value: 'Alphabetical' },
+  { label: 'Sports', value: 'Orlando Magic' },
+  { label: 'TV Series', value: 'Game of Thrones' },
+];
+
+const games = [
+  { label: 'Nintendo', value: 'Super Mario Brothers 3' },
+  { label: 'Sega Genesis', value: 'Shining Force 2' },
+  { label: 'Super Nintendo', value: 'Chrono Trigger' },
+  { label: 'Nintendo 64', value: 'Conker’s Bad Fur Day' },
+  { label: 'Gamecube', value: 'Mario Kart: Double Dash!!' },
+  { label: 'Xbox', value: 'Star Wars: Republic Commando' },
+  { label: 'Xbox 360', value: 'Portal series' },
+  { label: 'Xbox One', value: 'Assassin’s Creed: Odyssey' },
+  { label: 'Xbox Series', value: 'Clair Obscure: Expedition 33' },
+  { label: 'Nintendo Switch 2', value: 'Mario Kart World' },
+];
+---
+
+<section class="panel">
+  <h2 class="sec-h yel"><span class="gico">🎲</span><span class="txt">Useless Information</span></h2>
+  <p class="sec-sub">100% true · 0% professionally relevant</p>
+
+  <div class="group">
+    <h3 class="sub-h cyan">Hobbies &amp; Interests</h3>
+    <div class="chips">
+      {hobbies.map(hobby => (
+        <span class="chip">{hobby}</span>
+      ))}
+    </div>
+  </div>
+
+  <div class="group">
+    <h3 class="sub-h mag">Favorites</h3>
+    <div class="facts">
+      {favorites.map(fact => (
+        <div class="row">
+          <b>{fact.label}</b>
+          <span class="m">{fact.value}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="group">
+    <h3 class="sub-h lime">Video Games</h3>
+    <div class="facts">
+      {games.map(fact => (
+        <div class="row">
+          <b>{fact.label}</b>
+          <span class="m">{fact.value}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .panel {
+    background: linear-gradient(180deg, var(--color-panel), var(--color-bg2));
+    border: 2px solid var(--color-hr);
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px rgba(22,240,224,.10), 0 18px 40px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04);
+    padding: 26px 28px;
+    margin: 20px 0;
+  }
+  .sec-h {
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    font-size: clamp(23px, 3.6vw, 33px);
+    margin: 0 0 4px;
+    line-height: 1.12;
+    color: #fff;
+    display: block;
+    text-wrap: balance;
+  }
+  .sec-h .gico {
+    font-size: .86em;
+    filter: drop-shadow(0 0 6px currentColor);
+    display: inline-block;
+    vertical-align: -2px;
+    margin-right: 11px;
+  }
+  .sec-h .txt {
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background: linear-gradient(transparent 62%, rgba(255,54,208,.42) 62%, rgba(255,54,208,.42) 90%, transparent 90%);
+    padding: 0 3px;
+  }
+  .sec-h.yel {
+    color: var(--color-neon3);
+    text-shadow: 0 0 12px rgba(255,229,61,.55);
+  }
+  .sec-sub {
+    color: var(--color-ink2);
+    font-size: 15px;
+    margin: 0 0 16px;
+  }
+  .group + .group { margin-top: 24px; }
+  .sub-h {
+    font-family: "VT323", monospace;
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+  }
+  .sub-h.cyan {
+    color: var(--color-neon1);
+    text-shadow: 0 0 10px rgba(22,240,224,.5);
+  }
+  .sub-h.mag {
+    color: var(--color-neon2);
+    text-shadow: 0 0 10px rgba(255,54,208,.5);
+  }
+  .sub-h.lime {
+    color: var(--color-neon4);
+    text-shadow: 0 0 10px rgba(93,255,122,.5);
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 8px;
+  }
+  .chip {
+    font-family: "VT323", monospace;
+    font-size: 18px;
+    letter-spacing: .5px;
+    border: 2px solid var(--color-neon2);
+    border-radius: 20px;
+    padding: 3px 14px;
+    color: var(--color-ink);
+    background: rgba(255,54,208,.07);
+    box-shadow: 0 0 10px rgba(255,54,208,.2), inset 0 0 8px rgba(255,54,208,.1);
+    transition: transform .1s ease, background .1s ease, color .1s;
+  }
+  .chip:hover {
+    transform: translateY(-2px) rotate(-1.5deg);
+    background: var(--color-neon2);
+    color: #0a0420;
+    box-shadow: 0 0 16px var(--color-neon2);
+  }
+  .facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 26px;
+  }
+  .facts .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+    border-bottom: 1px dotted var(--color-hr);
+    padding: 6px 2px;
+  }
+  .facts .row b {
+    font-family: "VT323", monospace;
+    font-size: 19px;
+    color: var(--color-neon3);
+    font-weight: normal;
+    letter-spacing: .5px;
+    white-space: nowrap;
+  }
+  .facts .row .m {
+    font-size: 13.5px;
+    color: var(--color-ink);
+    text-align: right;
+  }
+
+  @media (max-width: 680px) {
+    .panel { padding: 20px 16px; }
+    .facts { grid-template-columns: 1fr; }
+  }
+</style>
