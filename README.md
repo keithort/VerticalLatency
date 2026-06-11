@@ -1,16 +1,12 @@
 # Vertical Latency
 
-Personal portfolio site for Keith Ort — a single-page, retro-neon throwback built with [Astro](https://astro.build). Zero JavaScript shipped except the WCAG motion-pause toggle.
+Personal portfolio site for Keith Ort — a Geocities throwback built with [Astro](https://astro.build).
 
 ## Stack
 
 - **Astro 6** — static output, single page
 - **Vanilla CSS** — neon theme (cyan/magenta/yellow/lime on deep navy), Monoton + VT323 fonts, starfield background
 - **Tailwind CSS v4** — available via Vite plugin (design is hand-rolled CSS)
-
-## Sections
-
-Hero with animated logo and CSS marquee · About Me · Useless Information (hobbies, favorites, video games) · Work History timeline · Contact · footer with obligatory LED hit counter and Netscape badge.
 
 ## Development
 
