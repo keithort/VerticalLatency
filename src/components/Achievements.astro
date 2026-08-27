@@ -1,0 +1,398 @@
+---
+interface Achievement {
+  company: string;
+  year: string;
+  project: string;
+  accent: 'lime' | 'mag' | 'cyan';
+  body: string;
+}
+
+const achievements: Achievement[] = [
+  {
+    company: 'Golf Channel',
+    year: '2015',
+    project: 'Mobile-First Rebuild',
+    accent: 'lime',
+    body:
+      'Golf Channel’s website had been migrated from Sitecore to Drupal by an outside consultancy, which ported the old theme by layering new classes over the existing stylesheet rather than rebuilding it — resulting in duplicated, bloated CSS with no real mobile support. As the sole front-end engineer, I rebuilt every page template from scratch over five months using mobile-first responsive styles, testing continuously on live devices rather than emulators alone. The rebuild cut the CSS file size by two-thirds and eliminated the tangled “onion” of overlapping styles, and the improved mobile experience let Golf Channel retire its separate mobile-only subdomain entirely — consolidating maintenance to a single responsive site.',
+  },
+  {
+    company: 'StoneX',
+    year: '2021',
+    project: 'CAT-Compliant Trading Platform',
+    accent: 'mag',
+    body:
+      'I built the front-end for a React web application (with a .NET backend) used internally by financial advisors to manage client accounts. When the team added trading functionality, it came with a regulatory requirement under the SEC’s Consolidated Audit Trail (CAT) rule to log every stage of a trade’s lifecycle — origination, routing, modification, and execution. As the solo front-end engineer, I built the interface for advisors to execute trades individually or in batches, along with a monitoring dashboard to track execution status and audit-trail logging in real time. The feature shipped on schedule and was well received by the advisors using it day to day.',
+  },
+  {
+    company: 'PayPal',
+    year: '2023',
+    project: 'Checkout Modernization',
+    accent: 'cyan',
+    body:
+      'Checkout previously lived across several separate applications, each serving its own use case with fragmented designs and inconsistent tech stacks. I worked as a front-end engineer on the team that consolidated these experiences into a single unified app built on Next.js. Within two months, the new architecture was live in production taking pilot traffic, with measurable gains across the board: latency dropped 75% and conversion rates rose 3.5%. Over the following months we migrated the remaining products onto the new stack, and the platform’s design enabled a release cadence shift from bi-weekly to daily or better. Three years in, the app has grown to 180 unique contributors and over 15,000 merged pull requests — a scale that reflects how much the unified architecture improved developer velocity across the org.',
+  },
+];
+---
+
+<section class="panel" id="achievements">
+  <h2 class="sec-h lime"><span class="gico">🏆</span><span class="txt">Crowning Achievements</span></h2>
+  <p class="sec-sub">three missions worth the disk space</p>
+
+  <div class="ach-grid">
+    {achievements.map(a => (
+      <article
+        class={`ach ${a.accent}`}
+        data-company={a.company}
+        data-year={a.year}
+        data-project={a.project}
+      >
+        <h3 class="co">{a.company}</h3>
+        <span class="yr">{a.year}</span>
+        <span class="proj">{a.project}</span>
+        <button class="pill" type="button" data-ach-open>
+          <span class="ar" aria-hidden="true">▸</span> get the details<span class="sr-only"> on {a.project} at {a.company}</span>
+        </button>
+        <div class="body">{a.body}</div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<div class="ach-overlay" id="achModal" hidden>
+  <div class="ach-win" role="dialog" aria-modal="true" aria-labelledby="achModalTitle">
+    <div class="ach-bar">
+      <span class="fn">project_details.txt</span>
+      <button class="ach-close" type="button"><span aria-hidden="true">✕</span> close</button>
+    </div>
+    <div class="ach-content">
+      <h3 class="ach-title" id="achModalTitle"></h3>
+      <p class="ach-meta" id="achModalMeta"></p>
+      <div class="ach-body" id="achModalBody"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .panel {
+    background: linear-gradient(180deg, var(--color-panel), var(--color-bg2));
+    border: 2px solid var(--color-hr);
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px rgba(22,240,224,.10), 0 18px 40px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04);
+    padding: 26px 28px;
+    margin: 20px 0;
+  }
+  .sec-h {
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    font-size: clamp(23px, 3.6vw, 33px);
+    margin: 0 0 4px;
+    line-height: 1.12;
+    color: #fff;
+    display: block;
+    text-wrap: balance;
+  }
+  .sec-h .gico {
+    font-size: .86em;
+    filter: drop-shadow(0 0 6px currentColor);
+    display: inline-block;
+    vertical-align: -2px;
+    margin-right: 11px;
+  }
+  .sec-h .txt {
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background: linear-gradient(transparent 62%, rgba(255,54,208,.42) 62%, rgba(255,54,208,.42) 90%, transparent 90%);
+    padding: 0 3px;
+  }
+  .sec-h.lime {
+    color: var(--color-neon4);
+    text-shadow: 0 0 12px rgba(93,255,122,.55);
+  }
+  .sec-sub {
+    color: var(--color-ink2);
+    font-size: 15px;
+    margin: 0 0 16px;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Cards */
+  .ach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .ach {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: linear-gradient(180deg, var(--color-panel2), var(--color-panel));
+    border: 2px solid var(--color-neon1);
+    border-radius: 12px;
+    padding: 16px 17px 17px;
+    box-shadow: 0 0 16px rgba(22,240,224,.18), 0 10px 24px rgba(0,0,0,.4);
+  }
+  .ach.lime {
+    border-color: var(--color-neon4);
+    box-shadow: 0 0 16px rgba(93,255,122,.18), 0 10px 24px rgba(0,0,0,.4);
+  }
+  .ach.mag {
+    border-color: var(--color-neon2);
+    box-shadow: 0 0 16px rgba(255,54,208,.18), 0 10px 24px rgba(0,0,0,.4);
+  }
+  .ach .co {
+    display: block;
+    margin: 0;
+    font-weight: normal;
+    font-family: var(--font-vt323);
+    font-size: 28px;
+    letter-spacing: .5px;
+    line-height: 1.08;
+    color: var(--color-neon1);
+    text-shadow: 0 0 8px rgba(22,240,224,.5);
+  }
+  .ach.lime .co {
+    color: var(--color-neon4);
+    text-shadow: 0 0 8px rgba(93,255,122,.5);
+  }
+  .ach.mag .co {
+    color: var(--color-neon2);
+    text-shadow: 0 0 8px rgba(255,54,208,.5);
+  }
+  .ach .yr {
+    display: block;
+    font-family: var(--font-vt323);
+    font-size: 16px;
+    color: var(--color-ink2);
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+  .ach .proj {
+    display: block;
+    font-size: 15px;
+    color: var(--color-ink);
+    margin: 9px 0 14px;
+    text-wrap: balance;
+  }
+  .ach .body { display: none; }
+
+  .pill {
+    margin-top: auto;
+    align-self: flex-start;
+    font-family: var(--font-vt323);
+    font-size: 19px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    border: 2px solid var(--color-neon1);
+    border-radius: 20px;
+    padding: 3px 16px;
+    color: var(--color-ink);
+    background: rgba(22,240,224,.07);
+    box-shadow: 0 0 10px rgba(22,240,224,.2), inset 0 0 8px rgba(22,240,224,.1);
+    transition: transform .1s ease, background .1s ease, color .1s;
+  }
+  .pill .ar { color: var(--color-neon1); }
+  .pill:hover {
+    transform: translateY(-2px);
+    background: var(--color-neon1);
+    color: #06061a;
+    box-shadow: 0 0 16px var(--color-neon1);
+  }
+  .pill:hover .ar { color: inherit; }
+  .ach.lime .pill {
+    border-color: var(--color-neon4);
+    background: rgba(93,255,122,.07);
+    box-shadow: 0 0 10px rgba(93,255,122,.2), inset 0 0 8px rgba(93,255,122,.1);
+  }
+  .ach.lime .pill .ar { color: var(--color-neon4); }
+  .ach.lime .pill:hover {
+    background: var(--color-neon4);
+    color: #062012;
+    box-shadow: 0 0 16px var(--color-neon4);
+  }
+  .ach.mag .pill {
+    border-color: var(--color-neon2);
+    background: rgba(255,54,208,.07);
+    box-shadow: 0 0 10px rgba(255,54,208,.2), inset 0 0 8px rgba(255,54,208,.1);
+  }
+  .ach.mag .pill .ar { color: var(--color-neon2); }
+  .ach.mag .pill:hover {
+    background: var(--color-neon2);
+    color: #0a0420;
+    box-shadow: 0 0 16px var(--color-neon2);
+  }
+
+  /* Modal */
+  .ach-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    overflow-y: auto;
+    padding: 24px 16px;
+    background: rgba(4,3,16,.84);
+  }
+  .ach-overlay[hidden] { display: none; }
+  .ach-win {
+    margin: auto;
+    width: min(660px, 100%);
+    background: linear-gradient(180deg, var(--color-panel2), var(--color-panel));
+    border: 2px solid var(--color-neon1);
+    border-radius: 12px;
+    box-shadow: 0 0 26px rgba(22,240,224,.28), 0 22px 50px rgba(0,0,0,.65);
+    overflow: hidden;
+  }
+  .ach-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 9px 7px 13px;
+    background: linear-gradient(90deg, var(--color-neon1), var(--color-neon2));
+  }
+  .ach-bar .fn {
+    font-family: var(--font-vt323);
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #0a0420;
+  }
+  .ach-close {
+    font-family: var(--font-vt323);
+    font-size: 17px;
+    letter-spacing: .5px;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 2px solid #0a0420;
+    border-radius: 7px;
+    padding: 1px 11px;
+    color: #0a0420;
+    background: rgba(255,255,255,.55);
+    transition: background .1s ease, color .1s ease;
+  }
+  .ach-close:hover {
+    background: #0a0420;
+    color: var(--color-neon3);
+  }
+  .ach-content { padding: 20px 24px 24px; }
+  .ach-title {
+    font-family: var(--font-vt323);
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: .5px;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--color-neon3);
+    text-shadow: 0 0 10px rgba(255,229,61,.5);
+  }
+  .ach-meta {
+    font-family: var(--font-vt323);
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--color-ink2);
+    margin: 4px 0 14px;
+  }
+  .ach-body {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--color-ink);
+  }
+
+  @media (max-width: 680px) {
+    .panel { padding: 20px 16px; }
+    .ach-grid { grid-template-columns: 1fr; }
+    .ach-content { padding: 18px 17px 20px; }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var overlay = document.getElementById('achModal');
+    if (!overlay) return;
+
+    /* .page is a stacking context (position:relative; z-index:1), which would trap this
+       fixed overlay underneath the floating motion button. Reparent it to <body>. */
+    document.body.appendChild(overlay);
+
+    var win = overlay.querySelector('.ach-win');
+    var FOCUSABLE = 'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    var titleEl = document.getElementById('achModalTitle');
+    var metaEl = document.getElementById('achModalMeta');
+    var bodyEl = document.getElementById('achModalBody');
+    var closeBtn = overlay.querySelector('.ach-close');
+    var opener = null;
+
+    /* Take the rest of the page out of the tab order and the a11y tree while the
+       dialog is up. Everything but the overlay is a direct child of <body>. */
+    function backgroundInert(on) {
+      Array.prototype.forEach.call(document.body.children, function (el) {
+        if (el === overlay) return;
+        if (on) el.setAttribute('inert', '');
+        else el.removeAttribute('inert');
+      });
+    }
+
+    /* Wrap Tab around the dialog's own controls, for browsers without inert. */
+    function trapTab(e) {
+      var items = Array.prototype.filter.call(win.querySelectorAll(FOCUSABLE), function (el) {
+        return el.offsetParent !== null;
+      });
+      if (!items.length) return;
+      var first = items[0], last = items[items.length - 1];
+      var inside = win.contains(document.activeElement);
+      if (e.shiftKey && (!inside || document.activeElement === first)) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && (!inside || document.activeElement === last)) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    function openModal(card, btn) {
+      var body = card.querySelector('.body');
+      titleEl.textContent = card.getAttribute('data-project') || '';
+      metaEl.textContent = (card.getAttribute('data-company') || '') + ' · ' + (card.getAttribute('data-year') || '');
+      bodyEl.innerHTML = body ? body.innerHTML : '';
+      opener = btn;
+      overlay.hidden = false;
+      overlay.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+      backgroundInert(true);
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      overlay.hidden = true;
+      document.body.style.overflow = '';
+      backgroundInert(false);
+      if (opener) { opener.focus(); opener = null; }
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ach-open]'), function (btn) {
+      btn.addEventListener('click', function () {
+        var card = btn.closest('.ach');
+        if (card) openModal(card, btn);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function (e) {
+      if (overlay.hidden) return;
+      if (e.key === 'Escape') closeModal();
+      else if (e.key === 'Tab') trapTab(e);
+    });
+  })();
+</script>
